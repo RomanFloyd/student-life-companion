@@ -22,7 +22,14 @@
         "Check at 8:00 AM daily for new slots"
       ],
       "source_url": "https://icp.administracionelectronica.gob.es",
-      "verified": true
+      "verified": true,
+      "cost": "€16.08",
+      "contacts": [
+        {"type": "email", "label": "Student Support", "value": "student.experience@harbour.space"}
+      ],
+      "quick_links": [
+        {"label": "📅 Book Appointment", "url": "https://icp.administracionelectronica.gob.es"}
+      ]
     },
     {
       "topic": "visa",
@@ -124,7 +131,15 @@
         "Confirm landlord allows empadronamiento before signing"
       ],
       "source_url": "https://www.idealista.com/en/",
-      "verified": true
+      "verified": true,
+      "contacts": [
+        {"type": "discord", "label": "#housing Channel", "value": "https://discord.gg/MYv8YTat"}
+      ],
+      "quick_links": [
+        {"label": "💬 Join Discord #housing", "url": "https://discord.gg/MYv8YTat"},
+        {"label": "🏠 Search on Idealista", "url": "https://www.idealista.com/en/"},
+        {"label": "🏠 Search on Spotahome", "url": "https://www.spotahome.com/"}
+      ]
     },
     {
       "topic": "housing",
@@ -137,7 +152,11 @@
         "Get certified copy (volant) for future admin tasks"
       ],
       "source_url": "https://seuelectronica.ajuntament.barcelona.cat/",
-      "verified": true
+      "verified": true,
+      "cost": "Free",
+      "quick_links": [
+        {"label": "📅 Book Appointment", "url": "https://seuelectronica.ajuntament.barcelona.cat/oficinavirtual/form/diac-cites/es/citizen/sol/new/2393"}
+      ]
     },
     {
       "topic": "housing",
@@ -189,7 +208,11 @@
         "Valid for unlimited metro, bus, tram, FGC for 90 days"
       ],
       "source_url": "https://www.tmb.cat/",
-      "verified": true
+      "verified": true,
+      "cost": "€44 (90 days unlimited)",
+      "quick_links": [
+        {"label": "🎫 Apply Online", "url": "https://www.tmb.cat/"}
+      ]
     },
     {
       "topic": "transport",
@@ -241,7 +264,15 @@
         "N26: open online with video ID in minutes"
       ],
       "source_url": "https://www.bancosantander.es/",
-      "verified": true
+      "verified": true,
+      "cost": "Free (student accounts)",
+      "contacts": [
+        {"type": "phone", "label": "María (Santander)", "value": "+34 691 14 63 42"},
+        {"type": "email", "label": "María (Santander)", "value": "1548@gruposantander.es"}
+      ],
+      "quick_links": [
+        {"label": "🏦 Open N26 Online", "url": "https://n26.com/en-eu/open-bank-account-in-spain"}
+      ]
     },
     {
       "topic": "banking",
@@ -268,7 +299,13 @@
         "Activation requires ID by EU law"
       ],
       "source_url": "https://www.digimobil.es/",
-      "verified": true
+      "verified": true,
+      "cost": "From €8/month",
+      "quick_links": [
+        {"label": "📱 Digi (€12 unlimited)", "url": "https://www.digimobil.es/movil/"},
+        {"label": "📱 Lowi (€8 50GB)", "url": "https://www.lowi.es/tarifas-movil/"},
+        {"label": "📱 Orange (€10 50GB)", "url": "https://www.orange.es/"}
+      ]
     },
     {
       "topic": "mobile",
@@ -336,7 +373,16 @@
         "Check Notion Student Info page for guides"
       ],
       "source_url": "https://harbour.space/",
-      "verified": true
+      "verified": true,
+      "contacts": [
+        {"type": "email", "label": "Student Experience", "value": "student.experience@harbour.space"},
+        {"type": "email", "label": "Academics", "value": "academics@harbour.space"},
+        {"type": "discord", "label": "Community Discord", "value": "https://discord.gg/MYv8YTat"}
+      ],
+      "quick_links": [
+        {"label": "💬 Join Discord", "url": "https://discord.gg/MYv8YTat"},
+        {"label": "📚 Student Info (Notion)", "url": "https://harbour-space.notion.site/Student-Info-0fea282016e642249f814ab3fa375ad5"}
+      ]
     }
   ]
   

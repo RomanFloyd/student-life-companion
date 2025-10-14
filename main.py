@@ -66,6 +66,9 @@ class QAResponse(BaseModel):
     verified: Optional[bool] = None
     similarity: Optional[float] = None
     source: str
+    cost: Optional[str] = None
+    contacts: Optional[List[dict]] = None
+    quick_links: Optional[List[dict]] = None
 
 def save_history(row: QAResponse, query: str):
     con = sqlite3.connect(DB_PATH)
@@ -104,7 +107,10 @@ def ask(query: str, min_score: float = 0.28, autosave: bool = True):
             source_url=item.get("source_url"),
             verified=item.get("verified"),
             similarity=round(best_score, 3),
-            source="internal-semantic"
+            source="internal-semantic",
+            cost=item.get("cost"),
+            contacts=item.get("contacts"),
+            quick_links=item.get("quick_links")
         )
         if autosave: save_history(resp, query)
         return resp
@@ -121,7 +127,10 @@ def ask(query: str, min_score: float = 0.28, autosave: bool = True):
                 source_url=item.get("source_url"),
                 verified=item.get("verified"),
                 similarity=None,
-                source="internal-fallback"
+                source="internal-fallback",
+                cost=item.get("cost"),
+                contacts=item.get("contacts"),
+                quick_links=item.get("quick_links")
             )
             if autosave: save_history(resp, query)
             return resp
@@ -129,7 +138,8 @@ def ask(query: str, min_score: float = 0.28, autosave: bool = True):
     resp = QAResponse(
         answer="No close match found. Please check the official Extranjería or Tax Agency pages.",
         matched_question=None, topic=None, steps=None, source_url=None,
-        verified=None, similarity=None, source="external"
+        verified=None, similarity=None, source="external",
+        cost=None, contacts=None, quick_links=None
     )
     if autosave: save_history(resp, query)
     return resp

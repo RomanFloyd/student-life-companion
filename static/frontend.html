@@ -7,7 +7,15 @@
     body { font-family: sans-serif; max-width: 800px; margin: 40px auto; }
     textarea { width: 100%; height: 60px; }
     button { padding: 8px 12px; margin-top: 5px; }
-    .card { border: 1px solid #ccc; padding: 10px; border-radius: 10px; margin-top: 10px; }
+    .card { border: 1px solid #ccc; padding: 15px; border-radius: 10px; margin-top: 10px; background: #f9f9f9; }
+    .cost-badge { display: inline-block; background: #4CAF50; color: white; padding: 4px 10px; border-radius: 12px; font-size: 14px; font-weight: bold; margin-left: 10px; }
+    .contacts { margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 8px; }
+    .contact-item { margin: 5px 0; }
+    .contact-item a { color: #1976d2; text-decoration: none; font-weight: 500; }
+    .contact-item a:hover { text-decoration: underline; }
+    .quick-links { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .quick-link-btn { display: inline-block; padding: 8px 16px; background: #2196F3; color: white; text-decoration: none; border-radius: 6px; font-size: 14px; transition: background 0.3s; }
+    .quick-link-btn:hover { background: #1976D2; }
   </style>
 </head>
 <body style="background: white; color: black;">
@@ -39,13 +47,45 @@
   // === Пункт 1 (вторая часть): renderAnswer ===
   function renderAnswer(data) {
     const badge = data.verified ? "✅ Verified" : (data.source === "external" ? "🌐 External" : "💬 Internal");
+    
+    // Contacts section
+    let contactsHTML = '';
+    if (data.contacts && data.contacts.length > 0) {
+      const contactItems = data.contacts.map(c => {
+        if (c.type === 'email') {
+          return `<div class="contact-item">📧 <strong>${c.label}:</strong> <a href="mailto:${c.value}">${c.value}</a></div>`;
+        } else if (c.type === 'phone') {
+          return `<div class="contact-item">📞 <strong>${c.label}:</strong> <a href="tel:${c.value}">${c.value}</a></div>`;
+        } else if (c.type === 'discord') {
+          return `<div class="contact-item">💬 <strong>${c.label}:</strong> <a href="${c.value}" target="_blank">Join Discord</a></div>`;
+        }
+        return '';
+      }).join('');
+      contactsHTML = `<div class="contacts"><strong>📞 Contacts:</strong>${contactItems}</div>`;
+    }
+    
+    // Quick links section
+    let quickLinksHTML = '';
+    if (data.quick_links && data.quick_links.length > 0) {
+      const linkButtons = data.quick_links.map(link => 
+        `<a href="${link.url}" target="_blank" class="quick-link-btn">${link.label}</a>`
+      ).join('');
+      quickLinksHTML = `<div class="quick-links">${linkButtons}</div>`;
+    }
+    
+    // Cost badge
+    const costBadge = data.cost ? `<span class="cost-badge">💰 ${data.cost}</span>` : '';
+    
     document.querySelector('#answer').innerHTML = `
       <div class="card">
         <div><strong>Source:</strong> ${badge}
           ${data.source_url ? `&nbsp;•&nbsp;<a href="${data.source_url}" target="_blank">Official link</a>` : ""}
+          ${costBadge}
         </div>
-        <p>${data.answer}</p>
+        <p><strong>${data.answer}</strong></p>
         ${Array.isArray(data.steps) ? `<ol>${data.steps.map(s => `<li>${s}</li>`).join("")}</ol>` : ""}
+        ${contactsHTML}
+        ${quickLinksHTML}
       </div>
     `;
   }
