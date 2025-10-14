@@ -1,0 +1,39 @@
+[
+    {
+      "topic": "visa",
+      "question": "How to renew student visa?",
+      "answer": "Renew your student residence and then book TOMA DE HUELLAS for the TIE card.",
+      "steps": [
+        "Prepare passport copy, EX-17, photo, tasa 790-012 receipt",
+        "Book 'Policía – Toma de huellas' in Barcelona",
+        "Bring documents to the appointment"
+      ],
+      "source_url": "https://icp.administracionelectronica.gob.es",
+      "verified": true
+    },
+    {
+      "topic": "work",
+      "question": "How to get a work permit as a student?",
+      "answer": "You can apply for a part-time work authorization via your university with a job offer and valid TIE.",
+      "steps": [
+        "Get a written job offer (hours within student limits)",
+        "Check your university guidance office",
+        "Submit request with your current student card (TIE)"
+      ],
+      "source_url": "https://www.inclusion.gob.es/",
+      "verified": false
+    },
+    {
+      "topic": "tax",
+      "question": "Do students pay taxes in Spain?",
+      "answer": "If you work, you file IRPF annually; many students have simple returns.",
+      "steps": [
+        "Collect payslips and NIE/TIE",
+        "Use Agencia Tributaria portal to file",
+        "Check thresholds and deductions for students"
+      ],
+      "source_url": "https://sede.agenciatributaria.gob.es/",
+      "verified": true
+    }
+  ]
+  

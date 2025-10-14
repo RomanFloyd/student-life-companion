@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Student Life Companion</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; }
+    textarea { width: 100%; height: 60px; }
+    button { padding: 8px 12px; margin-top: 5px; }
+    .card { border: 1px solid #ccc; padding: 10px; border-radius: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body style="background: white; color: black;">
+  <h1 style="color: blue;">Student Life Companion</h1>
+  <p style="color: green; font-weight: bold;">✓ Page loaded successfully!</p>
+
+  <!-- окно ввода -->
+  <textarea id="question" placeholder="Ask something about visa, work or taxes..."></textarea>
+  <br>
+  <button onclick="submitQuestion()">Ask</button>
+
+  <!-- сюда пойдёт ответ -->
+  <div id="answer"></div>
+
+  <h3>History</h3>
+  <!-- сюда подгрузится история -->
+  <div id="history"></div>
+
+  <script>
+  // === Пункт 1: функция askAssistant ===
+  async function askAssistant(userQuestion) {
+    const url = `http://127.0.0.1:8000/ask?query=${encodeURIComponent(userQuestion)}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('API error');
+    const data = await res.json();
+    return data;
+  }
+
+  // === Пункт 1 (вторая часть): renderAnswer ===
+  function renderAnswer(data) {
+    const badge = data.verified ? "✅ Verified" : (data.source === "external" ? "🌐 External" : "💬 Internal");
+    document.querySelector('#answer').innerHTML = `
+      <div class="card">
+        <div><strong>Source:</strong> ${badge}
+          ${data.source_url ? `&nbsp;•&nbsp;<a href="${data.source_url}" target="_blank">Official link</a>` : ""}
+        </div>
+        <p>${data.answer}</p>
+        ${Array.isArray(data.steps) ? `<ol>${data.steps.map(s => `<li>${s}</li>`).join("")}</ol>` : ""}
+      </div>
+    `;
+  }
+
+  // === Пункт 2: история ===
+  async function loadHistory() {
+    const res = await fetch('http://127.0.0.1:8000/history?limit=10');
+    const items = await res.json();
+    const list = items.map(r => `
+      <li>
+        <span>${new Date(r.ts * 1000).toLocaleString()}</span> —
+        <em>${r.query}</em> → <small>${r.source}</small>
+      </li>
+    `).join("");
+    document.querySelector('#history').innerHTML = `<ul>${list}</ul>`;
+  }
+
+  // === помощник для кнопки ===
+  async function submitQuestion() {
+    const q = document.querySelector('#question').value.trim();
+    if (!q) return alert("Please enter a question");
+    const data = await askAssistant(q);
+    renderAnswer(data);
+    loadHistory();
+  }
+
+  // === при загрузке страницы ===
+  // Обернем в try-catch чтобы не блокировать рендер
+  loadHistory().catch(err => {
+    console.error('Failed to load history:', err);
+    document.querySelector('#history').innerHTML = '<p style="color:red;">Failed to load history. Check console.</p>';
+  });
+  </script>
+</body>
+</html>
