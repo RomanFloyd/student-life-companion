@@ -5,6 +5,10 @@ from pydantic import BaseModel
 from typing import List, Optional
 import json, sqlite3, time, os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # semantic search
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -131,6 +135,7 @@ def ask_groq_llm(query: str) -> str:
     try:
         # Get API key from environment variable
         api_key = os.getenv("GROQ_API_KEY")
+        
         if not api_key:
             return "I couldn't find an answer in my knowledge base. Please try rephrasing your question or contact student.experience@harbour.space"
         
@@ -141,7 +146,7 @@ def ask_groq_llm(query: str) -> str:
         context = f"You are a helpful AI assistant for Harbour.Space University students in Barcelona. You help with: {', '.join(topics)}. Be concise and helpful."
         
         response = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",  # Free, fast model
+            model="llama-3.3-70b-versatile",  # Free, fast model
             messages=[
                 {"role": "system", "content": context},
                 {"role": "user", "content": query}
