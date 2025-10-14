@@ -5,10 +5,14 @@ AI-powered assistant for international students in Spain, helping with visa, wor
 ## Features
 
 - **Semantic Search**: Uses TF-IDF and cosine similarity to find relevant answers
-- **Knowledge Base**: Curated information about student visas, work permits, and taxes
+- **AI Fallback**: Groq LLM (Llama 3.1 70B) answers questions not in knowledge base - **FREE!**
+- **Knowledge Base**: 42 curated Q&As about student life, visa, housing, university
+- **Rating System**: 👍/👎 ratings improve search results
+- **Topic Filters**: Browse questions by category (Visa, Housing, University, etc.)
+- **Popular Questions**: Top-5 most helpful answers
 - **Query History**: SQLite database tracks all questions and answers
-- **Verified Sources**: Links to official government portals
-- **Modern UI**: Clean, responsive web interface
+- **Dark Theme**: Beautiful UI with animations and gradients
+- **Mobile Ready**: Works on phone via local network
 
 ## Tech Stack
 
@@ -30,7 +34,15 @@ cd windsurf-project
 pip install -r requirements.txt
 ```
 
-3. Run the server:
+3. **Setup Groq API (OPTIONAL but recommended):**
+```bash
+# Get free API key from https://console.groq.com/
+export GROQ_API_KEY="gsk_your_key_here"
+
+# See GROQ_SETUP.md for detailed instructions
+```
+
+4. Run the server:
 ```bash
 # Local only (default)
 uvicorn main:app --reload
@@ -39,7 +51,7 @@ uvicorn main:app --reload
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-4. Open the frontend:
+5. Open the frontend:
 ```
 # On your computer
 http://127.0.0.1:8000/static/frontend.html

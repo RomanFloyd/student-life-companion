@@ -3,12 +3,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List, Optional
-import json, sqlite3, time
+import json, sqlite3, time, os
 from pathlib import Path
 
 # semantic search
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+# Groq LLM
+from groq import Groq
 
 app = FastAPI(title="Student Life Companion")
 
@@ -123,6 +126,35 @@ def get_question_rating_boost(question: str) -> float:
     boost = min(0.1, (score / total) * 0.05)
     return boost
 
+def ask_groq_llm(query: str) -> str:
+    """Fallback to Groq LLM when no answer found in knowledge base"""
+    try:
+        # Get API key from environment variable
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key:
+            return "I couldn't find an answer in my knowledge base. Please try rephrasing your question or contact student.experience@harbour.space"
+        
+        client = Groq(api_key=api_key)
+        
+        # Create context from knowledge base topics
+        topics = set(item.get("topic", "") for item in KNOWLEDGE)
+        context = f"You are a helpful AI assistant for Harbour.Space University students in Barcelona. You help with: {', '.join(topics)}. Be concise and helpful."
+        
+        response = client.chat.completions.create(
+            model="llama-3.1-70b-versatile",  # Free, fast model
+            messages=[
+                {"role": "system", "content": context},
+                {"role": "user", "content": query}
+            ],
+            temperature=0.7,
+            max_tokens=500
+        )
+        
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"Groq API error: {e}")
+        return "I couldn't find an answer in my knowledge base. Please try rephrasing your question or contact student.experience@harbour.space"
+
 @app.get("/ask", response_model=QAResponse)
 def ask(query: str, min_score: float = 0.28, autosave: bool = True):
     q_vec = VECTORIZER.transform([query])
@@ -179,11 +211,22 @@ def ask(query: str, min_score: float = 0.28, autosave: bool = True):
             if autosave: save_history(resp, query)
             return resp
 
+    # Groq LLM fallback
+    llm_answer = ask_groq_llm(query)
     resp = QAResponse(
-        answer="No close match found. Please check the official Extranjería or Tax Agency pages.",
-        matched_question=None, topic=None, steps=None, source_url=None,
-        verified=None, similarity=None, source="external",
-        cost=None, contacts=None, quick_links=None, deadline=None, related_topics=None
+        answer=llm_answer,
+        matched_question=None, 
+        topic="general", 
+        steps=None, 
+        source_url=None,
+        verified=False, 
+        similarity=None, 
+        source="llm-groq",
+        cost=None, 
+        contacts=[{"type": "email", "label": "Student Experience", "value": "student.experience@harbour.space"}], 
+        quick_links=None, 
+        deadline=None, 
+        related_topics=None
     )
     if autosave: save_history(resp, query)
     return resp
