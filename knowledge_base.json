@@ -12,6 +12,59 @@
       "verified": true
     },
     {
+      "topic": "visa",
+      "question": "How to book Toma de huellas appointment in Barcelona?",
+      "answer": "Book online at ICP portal. Slots open daily at 8:00 AM and disappear very fast.",
+      "steps": [
+        "Go to icp.administracionelectronica.gob.es",
+        "Select Province: Barcelona",
+        "Choose 'POLICÍA – TOMA DE HUELLAS (EXPEDICIÓN DE TARJETA)'",
+        "Check at 8:00 AM daily for new slots"
+      ],
+      "source_url": "https://icp.administracionelectronica.gob.es",
+      "verified": true
+    },
+    {
+      "topic": "visa",
+      "question": "What documents do I need for TIE card application?",
+      "answer": "You need passport with entry stamp, empadronamiento, EX-17 form, photo, tasa 790-012 receipt, and health insurance.",
+      "steps": [
+        "Passport + copy of photo page and entry stamp",
+        "Empadronamiento issued less than 3 months ago",
+        "1 color photo 32×26 mm white background",
+        "Paid Tasa 790-012 receipt (€16.08)",
+        "Harbour.Space enrollment letter",
+        "Health insurance policy"
+      ],
+      "source_url": "https://www.inclusion.gob.es/",
+      "verified": true
+    },
+    {
+      "topic": "visa",
+      "question": "Can I travel in Europe with Spanish TIE card?",
+      "answer": "Yes, you can travel within Schengen area with your TIE card and passport for up to 90 days in any 180-day period.",
+      "steps": [
+        "Always carry both TIE card and passport",
+        "Check validity dates before travel",
+        "Keep digital copies as backup"
+      ],
+      "source_url": "https://www.policia.es/",
+      "verified": true
+    },
+    {
+      "topic": "visa",
+      "question": "What is Student Visa Type D?",
+      "answer": "Student Visa Type D is for studies longer than 90 days in Spain. Valid up to 1 year, renewable, allows work up to 20 hours per week.",
+      "steps": [
+        "Apply at Spanish consulate 3 months before classes",
+        "Prepare financial proof (€600/month minimum)",
+        "Get health insurance with €30,000 coverage",
+        "Book consular appointment early"
+      ],
+      "source_url": "https://www.inclusion.gob.es/",
+      "verified": true
+    },
+    {
       "topic": "work",
       "question": "How to get a work permit as a student?",
       "answer": "You can apply for a part-time work authorization via your university with a job offer and valid TIE.",
@@ -24,6 +77,31 @@
       "verified": false
     },
     {
+      "topic": "work",
+      "question": "How many hours can a student work in Spain?",
+      "answer": "Students with Type D visa can work up to 20 hours per week or part-time during studies.",
+      "steps": [
+        "Check your visa conditions",
+        "Ensure work doesn't interfere with studies",
+        "Get written job offer before applying for authorization"
+      ],
+      "source_url": "https://www.inclusion.gob.es/",
+      "verified": true
+    },
+    {
+      "topic": "work",
+      "question": "What is Social Security Number (NUSS) and how to get it?",
+      "answer": "NUSS is your Social Security number needed for legal work in Spain. You can get it online via Import@ss portal in 5 minutes.",
+      "steps": [
+        "Go to portal.seg-social.gob.es",
+        "Select 'Solicitar NUSS' under Altas y modificaciones",
+        "Log in with SMS code (accepts foreign numbers since March 2025)",
+        "Download PDF confirmation instantly"
+      ],
+      "source_url": "https://portal.seg-social.gob.es",
+      "verified": true
+    },
+    {
       "topic": "tax",
       "question": "Do students pay taxes in Spain?",
       "answer": "If you work, you file IRPF annually; many students have simple returns.",
@@ -33,6 +111,231 @@
         "Check thresholds and deductions for students"
       ],
       "source_url": "https://sede.agenciatributaria.gob.es/",
+      "verified": true
+    },
+    {
+      "topic": "housing",
+      "question": "How to find student housing in Barcelona?",
+      "answer": "Use verified portals like Idealista, Spotahome, HousingAnywhere, or join Harbour.Space Discord #housing channel.",
+      "steps": [
+        "Check Harbour.Space Discord #housing channel first",
+        "Search on Idealista.com, Spotahome, HousingAnywhere",
+        "Avoid scams: never pay before video tour",
+        "Confirm landlord allows empadronamiento before signing"
+      ],
+      "source_url": "https://www.idealista.com/en/",
+      "verified": true
+    },
+    {
+      "topic": "housing",
+      "question": "What is empadronamiento and why do I need it?",
+      "answer": "Empadronamiento is city residency registration. Mandatory for NIE/TIE, bank account, healthcare, and staying in Spain over 6 months.",
+      "steps": [
+        "Book appointment at OAC (Oficina d'Atenció Ciutadana)",
+        "Bring passport, rental contract (≥6 months), and utility bill",
+        "Landlord or representative must attend with you",
+        "Get certified copy (volant) for future admin tasks"
+      ],
+      "source_url": "https://seuelectronica.ajuntament.barcelona.cat/",
+      "verified": true
+    },
+    {
+      "topic": "housing",
+      "question": "How much is typical rent in Barcelona for students?",
+      "answer": "Furnished room in shared flat: €500-850 depending on neighborhood. Poblenou (near campus): €550-750. Whole 1-bedroom: from €1,100.",
+      "steps": [
+        "Poblenou (near Harbour.Space): €550-750, 15 min walk",
+        "Born/Gothic: €600-800, 10 min bike",
+        "Eixample: €650-850, 20 min metro",
+        "Sant Martí/Clot: €500-700, budget-friendly"
+      ],
+      "source_url": "https://www.idealista.com/",
+      "verified": true
+    },
+    {
+      "topic": "housing",
+      "question": "What is fianza (deposit) in Spain?",
+      "answer": "Fianza is rental deposit, maximum 2 months' rent. Landlord must lodge it with INCASÒL and give you receipt.",
+      "steps": [
+        "Confirm deposit amount in contract (max 2 months)",
+        "Get INCASÒL receipt from landlord",
+        "Take photos of apartment condition",
+        "Landlord must return deposit within 30 days after checkout"
+      ],
+      "source_url": "https://agenciahabitatge.gencat.cat/",
+      "verified": true
+    },
+    {
+      "topic": "transport",
+      "question": "How to get from Barcelona airport to city center?",
+      "answer": "Cheapest: Metro L9 (€5.70, 45 min) or R2 Nord train from T2 (€2.55, 27 min to Passeig de Gràcia). Fastest: Aerobús (€7.45, 35 min) or taxi (€35-40).",
+      "steps": [
+        "Metro L9: every 7 min, change at Collblanc or Torrassa",
+        "R2 Nord train: only from T2, free shuttle from T1",
+        "Aerobús: 24h service, WiFi, direct to Plaça Catalunya",
+        "Night buses N16/N17: 02:00-05:00 when metro closed"
+      ],
+      "source_url": "https://www.tmb.cat/en/",
+      "verified": true
+    },
+    {
+      "topic": "transport",
+      "question": "What is T-Jove card and how to get it?",
+      "answer": "T-Jove is unlimited 90-day travel pass for under-30s in Barcelona. Costs €44 and includes 8,000 discounts across Catalonia.",
+      "steps": [
+        "Must be 30 years old or younger",
+        "Apply online or at TMB office",
+        "Bring passport/TIE and proof of age",
+        "Valid for unlimited metro, bus, tram, FGC for 90 days"
+      ],
+      "source_url": "https://www.tmb.cat/",
+      "verified": true
+    },
+    {
+      "topic": "transport",
+      "question": "What is T-Casual card in Barcelona?",
+      "answer": "T-Casual is 10-trip ticket for €12.55 (Zone 1). Saves 50% per ride but NOT valid for airport metro.",
+      "steps": [
+        "Buy at metro stations or TMB app",
+        "10 trips for €12.55 in Zone 1",
+        "Can be shared with friends",
+        "NOT valid for Metro L9 airport stations"
+      ],
+      "source_url": "https://www.tmb.cat/",
+      "verified": true
+    },
+    {
+      "topic": "healthcare",
+      "question": "How to get CatSalut health card (TSI)?",
+      "answer": "Get INSS healthcare certificate first, then apply online for TSI. You'll receive plastic card in 10 days and digital TSI instantly.",
+      "steps": [
+        "Get INSS healthcare certificate at seg-social.es",
+        "Apply online at salut.gencat.cat",
+        "Upload: INSS certificate, passport/TIE, empadronamiento, photo",
+        "Download digital TSI from La Meva Salut app immediately"
+      ],
+      "source_url": "https://catsalut.gencat.cat/",
+      "verified": true
+    },
+    {
+      "topic": "healthcare",
+      "question": "What to do in medical emergency in Barcelona?",
+      "answer": "Call 112 for emergencies. Ambulances and ER visits are free with CatSalut TSI card. For non-emergency, visit your local CAP.",
+      "steps": [
+        "Emergency: call 112 (English available)",
+        "Show your TSI card or passport at hospital",
+        "Non-emergency: book appointment at local CAP",
+        "Call 061 Salut Respon for health advice"
+      ],
+      "source_url": "https://catsalut.gencat.cat/",
+      "verified": true
+    },
+    {
+      "topic": "banking",
+      "question": "How to open a Spanish bank account as a student?",
+      "answer": "Most banks offer free student accounts. Santander Cuenta Joven is free for ages 18-28. N26 is 100% digital and instant.",
+      "steps": [
+        "Bring passport/TIE and empadronamiento",
+        "Get Spanish mobile number first",
+        "Santander: visit C/ de la Marina 102, ask for María (+34 691 14 63 42)",
+        "N26: open online with video ID in minutes"
+      ],
+      "source_url": "https://www.bancosantander.es/",
+      "verified": true
+    },
+    {
+      "topic": "banking",
+      "question": "What documents do I need to open a bank account in Spain?",
+      "answer": "You need passport or TIE/NIE, Spanish mobile number, and proof of address (empadronamiento). Some banks accept passport + empadronamiento while TIE is pending.",
+      "steps": [
+        "Passport or TIE/NIE (resguardo accepted if TIE pending)",
+        "Empadronamiento or proof of address (less than 3 months)",
+        "Spanish mobile number for SMS codes",
+        "Student enrollment letter (sometimes requested)"
+      ],
+      "source_url": "https://www.bancosantander.es/",
+      "verified": true
+    },
+    {
+      "topic": "mobile",
+      "question": "How to get a Spanish SIM card?",
+      "answer": "Buy prepaid SIM at any operator store with your passport. Best student options: Digi IlimiTODO (€12 unlimited), Lowi 50GB (€8), Orange Go 50GB (€10).",
+      "steps": [
+        "Bring passport or TIE to any operator store",
+        "Digi: €12/month unlimited data and calls",
+        "Lowi: €8/month 50GB + unlimited calls",
+        "Orange: €10/month 50GB + unlimited calls",
+        "Activation requires ID by EU law"
+      ],
+      "source_url": "https://www.digimobil.es/",
+      "verified": true
+    },
+    {
+      "topic": "mobile",
+      "question": "Can I use eSIM in Spain?",
+      "answer": "Yes, Vodafone, Movistar, and Orange offer eSIM. Digital providers like Airalo sell Spain eSIMs (10GB for €9) but usually pricier than local SIM.",
+      "steps": [
+        "Vodafone: eSIM available at airport kiosks",
+        "Movistar/Orange: eSIM via app for contract lines",
+        "Airalo/Nomad: instant eSIM online, good for tourists",
+        "Local SIM usually cheaper for long-term students"
+      ],
+      "source_url": "https://www.vodafone.es/",
+      "verified": true
+    },
+    {
+      "topic": "admin",
+      "question": "What is Digital Certificate (FNMT) and why do I need it?",
+      "answer": "Digital Certificate is your secure e-ID for Spanish bureaucracy. Needed for filing taxes, NIE/TIE renewals, viewing vida laboral, and signing documents online.",
+      "steps": [
+        "Get via video-identification (fastest, €2.99, 1 hour)",
+        "Go to sede.fnmt.gob.es",
+        "Upload selfie + passport scan",
+        "Download .pfx certificate and install",
+        "Valid for 4 years"
+      ],
+      "source_url": "https://www.sede.fnmt.gob.es/",
+      "verified": true
+    },
+    {
+      "topic": "admin",
+      "question": "How to renew student residence permit (prórroga)?",
+      "answer": "Submit renewal 60 days before TIE expires via MERCURIO online platform. Need EX-00 form, enrollment proof, financial means (€600/month), and updated empadronamiento.",
+      "steps": [
+        "Apply 60 days before expiry (latest: 90 days after)",
+        "Upload via MERCURIO platform online",
+        "Documents: EX-00, passport, TIE, enrollment, transcript, insurance, empadronamiento, Tasa 790-052",
+        "Get resguardo receipt to prove legal stay",
+        "Processing: up to 3 months"
+      ],
+      "source_url": "https://www.inclusion.gob.es/",
+      "verified": true
+    },
+    {
+      "topic": "university",
+      "question": "When is Harbour.Space orientation day?",
+      "answer": "Orientation Day is typically on Day 3 after arrival. You'll collect student ID, log into campus WiFi, and join WhatsApp/Discord channels.",
+      "steps": [
+        "Attend Welcome Session on Day 3",
+        "Collect your student ID card",
+        "Connect to campus WiFi",
+        "Join Harbour.Space Discord and WhatsApp groups",
+        "First Personal Plan meeting at end of Week 1"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true
+    },
+    {
+      "topic": "university",
+      "question": "How to contact Harbour.Space student support?",
+      "answer": "Email student.experience@harbour.space for general questions or academics@harbour.space for academic matters.",
+      "steps": [
+        "General support: student.experience@harbour.space",
+        "Academic questions: academics@harbour.space",
+        "Join Discord for community help",
+        "Check Notion Student Info page for guides"
+      ],
+      "source_url": "https://harbour.space/",
       "verified": true
     }
   ]
