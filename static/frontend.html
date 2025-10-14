@@ -2,42 +2,375 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Student Life Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life Companion 🎓</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; }
-    textarea { width: 100%; height: 60px; }
-    button { padding: 8px 12px; margin-top: 5px; }
-    .card { border: 1px solid #ccc; padding: 15px; border-radius: 10px; margin-top: 10px; background: #f9f9f9; }
-    .cost-badge { display: inline-block; background: #4CAF50; color: white; padding: 4px 10px; border-radius: 12px; font-size: 14px; font-weight: bold; margin-left: 10px; }
-    .deadline-badge { display: inline-block; background: #FF9800; color: white; padding: 4px 10px; border-radius: 12px; font-size: 14px; font-weight: bold; margin-left: 10px; }
-    .contacts { margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 8px; }
-    .contact-item { margin: 5px 0; }
-    .contact-item a { color: #1976d2; text-decoration: none; font-weight: 500; }
-    .contact-item a:hover { text-decoration: underline; }
-    .quick-links { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .quick-link-btn { display: inline-block; padding: 8px 16px; background: #2196F3; color: white; text-decoration: none; border-radius: 6px; font-size: 14px; transition: background 0.3s; }
-    .quick-link-btn:hover { background: #1976D2; }
-    .related-topics { margin-top: 15px; padding: 10px; background: #fff3e0; border-radius: 8px; border-left: 4px solid #FF9800; }
-    .related-tag { display: inline-block; background: #FFE0B2; color: #E65100; padding: 4px 10px; border-radius: 12px; font-size: 13px; margin: 3px; }
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f5f7fa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #666666;
+      --border-color: #e0e0e0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.1);
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --accent-blue: #2196F3;
+      --accent-green: #4CAF50;
+      --accent-orange: #FF9800;
+    }
+    
+    [data-theme="dark"] {
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #16213e;
+      --bg-card: #0f3460;
+      --text-primary: #eaeaea;
+      --text-secondary: #b0b0b0;
+      --border-color: #2d3748;
+      --shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 30px 0;
+      background: var(--gradient-primary);
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+      animation: slideDown 0.5s ease;
+    }
+    
+    .header h1 {
+      color: white;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .header p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1em;
+    }
+    
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: 50px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1.2em;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+    
+    .search-box {
+      background: var(--bg-card);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding: 15px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 16px;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      resize: vertical;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+    
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: var(--shadow);
+      animation: slideUp 0.4s ease;
+    }
+    
+    .topic-icon {
+      font-size: 1.5em;
+      margin-right: 8px;
+    }
+    
+    .cost-badge, .deadline-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 10px;
+      animation: bounceIn 0.5s ease;
+    }
+    
+    .cost-badge {
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      color: white;
+    }
+    
+    .deadline-badge {
+      background: linear-gradient(135deg, #FF9800, #f57c00);
+      color: white;
+    }
+    
+    .contacts {
+      margin-top: 20px;
+      padding: 15px;
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(33, 150, 243, 0.05));
+      border-radius: 10px;
+      border-left: 4px solid var(--accent-blue);
+    }
+    
+    .contact-item {
+      margin: 8px 0;
+      padding: 5px 0;
+    }
+    
+    .contact-item a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    
+    .contact-item a:hover {
+      text-decoration: underline;
+      color: #1976d2;
+    }
+    
+    .quick-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .quick-link-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--gradient-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    }
+    
+    .quick-link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    .related-topics {
+      margin-top: 20px;
+      padding: 15px;
+      background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+      border-radius: 10px;
+      border-left: 4px solid var(--accent-orange);
+    }
+    
+    .related-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #FFE0B2, #FFCC80);
+      color: #E65100;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 13px;
+      margin: 4px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .related-tag:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(230, 81, 0, 0.2);
+    }
+    
+    .history-section {
+      margin-top: 40px;
+      background: var(--bg-card);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+    
+    .history-section h3 {
+      color: var(--text-primary);
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+    
+    .history-section ul {
+      list-style: none;
+    }
+    
+    .history-section li {
+      padding: 12px;
+      margin: 8px 0;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      border-left: 3px solid #667eea;
+      transition: all 0.2s ease;
+    }
+    
+    .history-section li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+    }
+    
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    @media (max-width: 768px) {
+      .header h1 { font-size: 1.8em; }
+      .container { padding: 10px; }
+      .theme-toggle { top: 10px; right: 10px; }
+    }
   </style>
 </head>
-<body style="background: white; color: black;">
-  <h1 style="color: blue;">Student Life Companion</h1>
-  <p style="color: green; font-weight: bold;">✓ Page loaded successfully!</p>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">🌙</button>
+  
+  <div class="container">
+    <div class="header">
+      <h1>🎓 Student Life Companion</h1>
+      <p>Your AI assistant for life at Harbour.Space Barcelona</p>
+    </div>
 
-  <!-- окно ввода -->
-  <textarea id="question" placeholder="Ask something about visa, work or taxes..."></textarea>
-  <br>
-  <button onclick="submitQuestion()">Ask</button>
+    <div class="search-box">
+      <textarea id="question" placeholder="Ask me anything: visa 🛂, housing 🏠, transport 🚇, university 🎓, food 🍕, discounts 💰..."></textarea>
+      <button class="btn-primary" onclick="submitQuestion()">🔍 Ask Question</button>
+    </div>
 
-  <!-- сюда пойдёт ответ -->
-  <div id="answer"></div>
+    <!-- сюда пойдёт ответ -->
+    <div id="answer"></div>
 
-  <h3>History</h3>
-  <!-- сюда подгрузится история -->
-  <div id="history"></div>
+    <div class="history-section">
+      <h3>📜 Recent Questions</h3>
+      <div id="history"></div>
+    </div>
+  </div>
 
   <script>
+  // Topic icons mapping
+  const TOPIC_ICONS = {
+    'visa': '🛂',
+    'work': '💼',
+    'tax': '💰',
+    'housing': '🏠',
+    'transport': '🚇',
+    'healthcare': '🏥',
+    'banking': '🏦',
+    'mobile': '📱',
+    'admin': '📋',
+    'university': '🎓',
+    'life': '🌆'
+  };
+  
+  // Theme toggle
+  function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? '' : 'dark';
+    body.setAttribute('data-theme', newTheme);
+    
+    const btn = document.querySelector('.theme-toggle');
+    btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    
+    // Save preference
+    localStorage.setItem('theme', newTheme);
+  }
+  
+  // Load saved theme
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.theme-toggle').textContent = '☀️';
+    }
+  });
+  
   // === Пункт 1: функция askAssistant ===
   async function askAssistant(userQuestion) {
     const url = `http://127.0.0.1:8000/ask?query=${encodeURIComponent(userQuestion)}`;
@@ -49,6 +382,7 @@
 
   // === Пункт 1 (вторая часть): renderAnswer ===
   function renderAnswer(data) {
+    const topicIcon = TOPIC_ICONS[data.topic] || '📌';
     const badge = data.verified ? "✅ Verified" : (data.source === "external" ? "🌐 External" : "💬 Internal");
     
     // Contacts section
@@ -91,13 +425,16 @@
     
     document.querySelector('#answer').innerHTML = `
       <div class="card">
-        <div><strong>Source:</strong> ${badge}
-          ${data.source_url ? `&nbsp;•&nbsp;<a href="${data.source_url}" target="_blank">Official link</a>` : ""}
+        <div style="margin-bottom: 15px;">
+          <span class="topic-icon">${topicIcon}</span>
+          <strong style="font-size: 1.1em;">${data.topic ? data.topic.toUpperCase() : 'INFO'}</strong>
+          <span style="margin-left: 10px;">${badge}</span>
+          ${data.source_url ? `&nbsp;•&nbsp;<a href="${data.source_url}" target="_blank" style="color: var(--accent-blue);">🔗 Official link</a>` : ""}
           ${costBadge}
           ${deadlineBadge}
         </div>
-        <p><strong>${data.answer}</strong></p>
-        ${Array.isArray(data.steps) ? `<ol>${data.steps.map(s => `<li>${s}</li>`).join("")}</ol>` : ""}
+        <p style="font-size: 1.1em; line-height: 1.6; margin: 15px 0;"><strong>${data.answer}</strong></p>
+        ${Array.isArray(data.steps) ? `<ol style="margin: 15px 0; padding-left: 25px; line-height: 1.8;">${data.steps.map(s => `<li style="margin: 8px 0;">${s}</li>`).join("")}</ol>` : ""}
         ${contactsHTML}
         ${quickLinksHTML}
         ${relatedHTML}
