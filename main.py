@@ -160,8 +160,53 @@ def ask_groq_llm(query: str) -> str:
         print(f"Groq API error: {e}")
         return "I couldn't find an answer in my knowledge base. Please try rephrasing your question or contact student.experience@harbour.space"
 
+def check_topic_relevance(query: str, matched_item: dict) -> bool:
+    """Check if matched question is actually relevant to the query"""
+    query_lower = query.lower()
+    question_lower = matched_item.get("question", "").lower()
+    answer_lower = matched_item.get("answer", "").lower()
+    topic = matched_item.get("topic", "")
+    
+    # Extract key nouns from query (simple approach)
+    query_words = set(query_lower.split())
+    question_words = set(question_lower.split())
+    
+    # Remove common words
+    stop_words = {'how', 'to', 'what', 'where', 'when', 'why', 'is', 'are', 'the', 'a', 'an', 'in', 'on', 'at', 'for', 'with', 'about', 'tell', 'me', 'can', 'i', 'do', 'does', 'spain', 'spanish', 'barcelona'}
+    query_keywords = query_words - stop_words
+    question_keywords = question_words - stop_words
+    
+    # Check if at least one meaningful keyword matches (excluding generic location words)
+    common_keywords = query_keywords & question_keywords
+    
+    # If no common keywords, probably not relevant
+    if len(common_keywords) == 0:
+        return False
+    
+    # If only "spanish" or "barcelona" matches, not relevant enough
+    if common_keywords <= {'spanish', 'barcelona', 'spain'}:
+        return False
+    
+    # Check topic relevance
+    topic_keywords = {
+        'visa': {'visa', 'tie', 'residence', 'permit', 'immigration', 'extranjeria'},
+        'work': {'work', 'job', 'employment', 'internship', 'salary'},
+        'housing': {'housing', 'apartment', 'flat', 'rent', 'empadronamiento', 'landlord'},
+        'transport': {'transport', 'metro', 'bus', 'train', 'tjove', 'ticket'},
+        'mobile': {'mobile', 'phone', 'sim', 'esim', 'vodafone', 'movistar'},
+        'university': {'programming', 'coding', 'computer', 'science', 'capstone', 'module', 'exam', 'grade', 'professor'},
+        'life': {'language', 'school', 'course', 'food', 'restaurant', 'beach', 'discount', 'fish', 'seafood'}
+    }
+    
+    # If query has specific topic keywords but matched different topic, reject
+    for topic_name, keywords in topic_keywords.items():
+        if query_keywords & keywords and topic != topic_name:
+            return False
+    
+    return True
+
 @app.get("/ask", response_model=QAResponse)
-def ask(query: str, min_score: float = 0.28, autosave: bool = True):
+def ask(query: str, min_score: float = 0.45, autosave: bool = True):
     q_vec = VECTORIZER.transform([query])
     sims = cosine_similarity(q_vec, KB_MATRIX)[0]
     
@@ -173,8 +218,12 @@ def ask(query: str, min_score: float = 0.28, autosave: bool = True):
     
     best_idx = int(sims.argmax())
     best_score = float(sims[best_idx])
+    best_item = KNOWLEDGE[best_idx]
+    
+    # Check relevance
+    is_relevant = check_topic_relevance(query, best_item)
 
-    if best_score >= min_score:
+    if best_score >= min_score and is_relevant:
         item = KNOWLEDGE[best_idx]
         resp = QAResponse(
             answer=item.get("answer",""),
