@@ -158,3 +158,26 @@ def history(limit: int = 20):
     rows = cur.fetchall()
     con.close()
     return [{"ts": r[0], "query": r[1], "answer": r[2], "source": r[3]} for r in rows]
+
+@app.get("/topics")
+def get_topics():
+    """Get all unique topics with counts"""
+    topics = {}
+    for item in KNOWLEDGE:
+        topic = item.get("topic", "other")
+        topics[topic] = topics.get(topic, 0) + 1
+    return {"topics": topics}
+
+@app.get("/questions/{topic}")
+def get_questions_by_topic(topic: str):
+    """Get all questions for a specific topic"""
+    questions = [
+        {
+            "question": item.get("question"),
+            "answer": item.get("answer"),
+            "topic": item.get("topic")
+        }
+        for item in KNOWLEDGE
+        if item.get("topic", "").lower() == topic.lower()
+    ]
+    return {"topic": topic, "count": len(questions), "questions": questions}
