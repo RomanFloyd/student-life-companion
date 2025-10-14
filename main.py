@@ -53,6 +53,16 @@ def init_db():
         source TEXT
     )
     """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS ratings (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        ts INTEGER,
+        question TEXT,
+        topic TEXT,
+        rating INTEGER,
+        user_query TEXT
+    )
+    """)
     con.commit(); con.close()
 
 init_db()
@@ -92,10 +102,38 @@ def reload_kb():
     VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
     return {"status": "reloaded", "items": len(KNOWLEDGE)}
 
+def get_question_rating_boost(question: str) -> float:
+    """Get rating boost for a question (0.0 to 0.1)"""
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("""
+        SELECT SUM(rating) as score, COUNT(*) as total
+        FROM ratings
+        WHERE question = ?
+    """, (question,))
+    row = cur.fetchone()
+    con.close()
+    
+    if not row or row[1] == 0:
+        return 0.0
+    
+    score = row[0] or 0
+    total = row[1]
+    # Boost: +0.05 per positive rating, max +0.1
+    boost = min(0.1, (score / total) * 0.05)
+    return boost
+
 @app.get("/ask", response_model=QAResponse)
 def ask(query: str, min_score: float = 0.28, autosave: bool = True):
     q_vec = VECTORIZER.transform([query])
     sims = cosine_similarity(q_vec, KB_MATRIX)[0]
+    
+    # Apply rating boost to similarity scores
+    for idx, item in enumerate(KNOWLEDGE):
+        question = item.get("question", "")
+        boost = get_question_rating_boost(question)
+        sims[idx] += boost
+    
     best_idx = int(sims.argmax())
     best_score = float(sims[best_idx])
 
@@ -181,3 +219,79 @@ def get_questions_by_topic(topic: str):
         if item.get("topic", "").lower() == topic.lower()
     ]
     return {"topic": topic, "count": len(questions), "questions": questions}
+
+class RatingRequest(BaseModel):
+    question: str
+    topic: Optional[str] = None
+    rating: int  # 1 for 👍, -1 for 👎
+    user_query: Optional[str] = None
+
+@app.post("/rate")
+def rate_answer(req: RatingRequest):
+    """Save answer rating"""
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute(
+        "INSERT INTO ratings (ts, question, topic, rating, user_query) VALUES (?,?,?,?,?)",
+        (int(time.time()), req.question, req.topic, req.rating, req.user_query)
+    )
+    con.commit()
+    con.close()
+    return {"status": "success", "message": "Rating saved"}
+
+@app.get("/popular")
+def get_popular_questions(limit: int = 5):
+    """Get most popular questions based on positive ratings"""
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("""
+        SELECT question, topic, 
+               SUM(CASE WHEN rating = 1 THEN 1 ELSE 0 END) as likes,
+               SUM(CASE WHEN rating = -1 THEN 1 ELSE 0 END) as dislikes,
+               SUM(rating) as score
+        FROM ratings
+        GROUP BY question
+        ORDER BY score DESC, likes DESC
+        LIMIT ?
+    """, (limit,))
+    rows = cur.fetchall()
+    con.close()
+    return [
+        {
+            "question": r[0],
+            "topic": r[1],
+            "likes": r[2],
+            "dislikes": r[3],
+            "score": r[4]
+        }
+        for r in rows
+    ]
+
+@app.get("/needs-improvement")
+def get_needs_improvement(limit: int = 5):
+    """Get questions with most negative ratings"""
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("""
+        SELECT question, topic, 
+               SUM(CASE WHEN rating = 1 THEN 1 ELSE 0 END) as likes,
+               SUM(CASE WHEN rating = -1 THEN 1 ELSE 0 END) as dislikes,
+               SUM(rating) as score
+        FROM ratings
+        GROUP BY question
+        HAVING dislikes > 0
+        ORDER BY score ASC, dislikes DESC
+        LIMIT ?
+    """, (limit,))
+    rows = cur.fetchall()
+    con.close()
+    return [
+        {
+            "question": r[0],
+            "topic": r[1],
+            "likes": r[2],
+            "dislikes": r[3],
+            "score": r[4]
+        }
+        for r in rows
+    ]
