@@ -544,6 +544,9 @@
   </div>
 
   <script>
+  // API Base URL - automatically uses current host
+  const API_BASE = window.location.origin;
+  
   // Topic icons mapping
   const TOPIC_ICONS = {
     'visa': '🛂',
@@ -591,7 +594,7 @@
     try {
       const userQuery = document.getElementById('question').value;
       
-      const res = await fetch('http://127.0.0.1:8000/rate', {
+      const res = await fetch(`${API_BASE}/rate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -628,7 +631,7 @@
   // Load popular questions
   async function loadPopularQuestions() {
     try {
-      const res = await fetch('http://127.0.0.1:8000/popular?limit=5');
+      const res = await fetch(`${API_BASE}/popular?limit=5`);
       const data = await res.json();
       
       const container = document.getElementById('popularQuestions');
@@ -661,7 +664,7 @@
   // Load topic filters
   async function loadTopicFilters() {
     try {
-      const res = await fetch('http://127.0.0.1:8000/topics');
+      const res = await fetch(`${API_BASE}/topics`);
       const data = await res.json();
       
       const filtersContainer = document.getElementById('topicFilters');
@@ -702,7 +705,7 @@
     }
     
     try {
-      const res = await fetch(`http://127.0.0.1:8000/questions/${topic}`);
+      const res = await fetch(`${API_BASE}/questions/${topic}`);
       const data = await res.json();
       
       if (data.questions.length === 0) {
@@ -736,7 +739,7 @@
   
   // === Пункт 1: функция askAssistant ===
   async function askAssistant(userQuestion) {
-    const url = `http://127.0.0.1:8000/ask?query=${encodeURIComponent(userQuestion)}`;
+    const url = `${API_BASE}/ask?query=${encodeURIComponent(userQuestion)}`;
     const res = await fetch(url);
     if (!res.ok) throw new Error('API error');
     const data = await res.json();
@@ -818,7 +821,7 @@
 
   // === Пункт 2: история ===
   async function loadHistory() {
-    const res = await fetch('http://127.0.0.1:8000/history?limit=10');
+    const res = await fetch(`${API_BASE}/history?limit=10`);
     const items = await res.json();
     const list = items.map(r => `
       <li>

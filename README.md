@@ -32,13 +32,27 @@ pip install -r requirements.txt
 
 3. Run the server:
 ```bash
+# Local only (default)
 uvicorn main:app --reload
+
+# Access from phone/other devices on same WiFi
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 4. Open the frontend:
 ```
+# On your computer
 http://127.0.0.1:8000/static/frontend.html
+
+# On your phone (same WiFi)
+http://YOUR_COMPUTER_IP:8000/static/frontend.html
+# Example: http://192.168.1.100:8000/static/frontend.html
 ```
+
+**To find your computer's IP:**
+- **Mac**: `ifconfig | grep "inet " | grep -v 127.0.0.1`
+- **Windows**: `ipconfig`
+- **Linux**: `ip addr show`
 
 ## API Endpoints
 
