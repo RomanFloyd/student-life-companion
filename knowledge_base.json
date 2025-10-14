@@ -555,5 +555,165 @@
         {"type": "email", "label": "Career Team", "value": "careers@harbour.space"}
       ],
       "related_topics": ["internship", "job search", "CV", "LinkedIn"]
+    },
+    {
+      "topic": "life",
+      "question": "Where to learn Spanish in Barcelona?",
+      "answer": "Top schools near campus: Camino Barcelona (from €29), World Class BCN (from €72), Lingua School, Olé Languages (from €86), Dinamo (from €110), Speak Easy (from €40).",
+      "steps": [
+        "Camino Barcelona: C/ de la Diputació 119 (from €29)",
+        "World Class BCN: Carrer del Bisbe Laguarda 4 (from €72)",
+        "Speak Easy: Ronda Universitat 7 (from €40)",
+        "Olé Languages: Carrer Mallorca 201 (from €86)",
+        "Check websites for current prices and schedules"
+      ],
+      "source_url": "https://www.caminobarcelona.com/",
+      "verified": true,
+      "cost": "From €29/course",
+      "quick_links": [
+        {"label": "🇪🇸 Camino Barcelona", "url": "https://www.caminobarcelona.com/"},
+        {"label": "🇪🇸 World Class BCN", "url": "https://worldclassbcn.com/"},
+        {"label": "🇪🇸 Speak Easy", "url": "https://www.speakeasybcn.com/en"}
+      ],
+      "related_topics": ["language", "courses", "integration"]
+    },
+    {
+      "topic": "life",
+      "question": "Where to eat near Harbour.Space campus?",
+      "answer": "Use interactive campus food map for restaurants within 10-min walk. Student discounts at La Terraza (€8-11 menú), Mogollon's Pizza (€11.90), SAX (€7.50), Ugarit (10% off).",
+      "steps": [
+        "Check interactive food map with purple pins",
+        "La Terraza: €8 small/€11 big menú (show HS ID)",
+        "Mogollon's Pizza: €11.90 pizza+drink+dessert",
+        "SAX: €7.50 Margherita combo (ask for HS discount)",
+        "Ugarit at Glòries: 10% cash discount on falafel"
+      ],
+      "source_url": "https://www.google.com/maps/d/u/0/edit?mid=1GsRMWCYpLCzX0TS7gc_r4OZJym7Zn9Wg",
+      "verified": true,
+      "cost": "From €7.50 with student discount",
+      "quick_links": [
+        {"label": "🗺️ Campus Food Map", "url": "https://www.google.com/maps/d/u/0/edit?mid=1GsRMWCYpLCzX0TS7gc_r4OZJym7Zn9Wg"}
+      ],
+      "related_topics": ["food", "discounts", "campus"]
+    },
+    {
+      "topic": "life",
+      "question": "What student discounts are available in Barcelona?",
+      "answer": "Get Carnet Jove (€8.40/year, 8000+ discounts), Studentfy app (10-25% off 150+ cafés), UNiDAYS (Apple -8%, ASOS -10%), Student Beans (tech discounts), Adobe CC (45% off).",
+      "steps": [
+        "Carnet Jove Catalunya: €8.40/year for 8000+ discounts (up to age 30)",
+        "Studentfy app: 10-25% off cafés, €3/month gym, €35 Andorra ski trips",
+        "UNiDAYS: Apple -8%, ASOS -10%, Levi's -20%",
+        "Student Beans: Lenovo -15%, HP -10%, ASICS -20%",
+        "Adobe Creative Cloud: 45% discount (€19.66/month)"
+      ],
+      "source_url": "https://www.carnetjove.cat/",
+      "verified": true,
+      "cost": "Carnet Jove: €8.40/year | Studentfy: €3/month",
+      "quick_links": [
+        {"label": "🎫 Get Carnet Jove", "url": "https://www.carnetjove.cat/"},
+        {"label": "📱 Download Studentfy", "url": "https://www.studentfy.com/"},
+        {"label": "🎓 UNiDAYS", "url": "https://www.myunidays.com/"},
+        {"label": "💻 Adobe Student", "url": "https://www.adobe.com/es/creativecloud/buy/students.html"}
+      ],
+      "related_topics": ["discounts", "apps", "software", "carnet jove"]
+    },
+    {
+      "topic": "life",
+      "question": "What are the best beaches near Barcelona?",
+      "answer": "Close: Platja del Fòrum (Zone 1, after class). Day trips: Cala Sant Francesc (Blanes), Garraf (35min train), Cala Treumal, Playa de Ocata. Take R1/R2/R3 trains from Plaça Catalunya.",
+      "steps": [
+        "Platja del Fòrum: Zone 1, quick dip after class",
+        "Cala Sant Francesc (Blanes): pine forest, emerald water",
+        "Garraf (Zone 2): 35-min train, calm shallows",
+        "Cala Treumal: tiny cove, arrive early",
+        "Playa de Ocata (El Masnou): wide sand, beach volleyball",
+        "Take R1/R2/R3 from Plaça Catalunya or Sants"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "cost": "Train: €2.40-5 depending on zone",
+      "related_topics": ["beaches", "costa brava", "day trips", "transport"]
+    },
+    {
+      "topic": "life",
+      "question": "What music festivals happen in Barcelona?",
+      "answer": "Major festivals: Primavera Sound (June, from €295), Cruïlla (from €100), Rock Fest Barcelona (July, from €195), Delirium (Girona, Aug, from €37), Sónar, BBK Live Bilbao.",
+      "steps": [
+        "Primavera Sound: June 4-6, Barcelona (from €295)",
+        "Festival Cruïlla: Barcelona (from €100)",
+        "Barcelona Rock Fest: July 3-4 (from €195)",
+        "Delirium: Girona, Aug 3 (from €37)",
+        "Bilbao BBK Live: July 9-11 (from €75)",
+        "Check websites for lineups and tickets"
+      ],
+      "source_url": "https://www.primaverasound.com/",
+      "verified": true,
+      "cost": "From €37 (Delirium) to €295 (Primavera)",
+      "quick_links": [
+        {"label": "🎵 Primavera Sound", "url": "https://www.primaverasound.com/en/tickets"},
+        {"label": "🎵 Cruïlla", "url": "https://www.cruillabarcelona.com/en/tickets/"},
+        {"label": "🎵 Rock Fest", "url": "https://www.barcelonarockfest.com/en/tickets/"}
+      ],
+      "related_topics": ["festivals", "music", "events", "concerts"]
+    },
+    {
+      "topic": "life",
+      "question": "How to use Bicing bike sharing?",
+      "answer": "Bicing is Barcelona's docked bike system (classic & e-bike). Costs €35/year + pay-per-ride. Requires NIE. Use SMOU app to unlock bikes.",
+      "steps": [
+        "Get your NIE first (required by law)",
+        "Download SMOU app",
+        "Register with NIE and payment method",
+        "Pay €35/year subscription",
+        "Find nearest Bicing station on app",
+        "Unlock bike and pay per ride"
+      ],
+      "source_url": "https://www.bicing.barcelona/",
+      "verified": true,
+      "cost": "€35/year + pay-per-ride",
+      "deadline": "⏰ NIE required - no fake documents accepted",
+      "related_topics": ["transport", "bikes", "NIE", "eco-friendly"]
+    },
+    {
+      "topic": "life",
+      "question": "What are good weekend trips from Barcelona?",
+      "answer": "Popular trips: Skiing at La Molina, Day trip to Girona, Wine region Penedès, Tarragona, Sitges beach, Madrid weekend, Paris long weekend, Surfcamps on Costa Brava.",
+      "steps": [
+        "Skiing: La Molina (2h from Barcelona)",
+        "Day trips: Girona, Tarragona, Sitges (1h by train)",
+        "Wine tasting: Penedès region",
+        "Weekend: Madrid, Paris, Vienna",
+        "Beach: Sitges, Costa Brava",
+        "Adventure: Surfcamps, Marrakesh"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "cost": "Day trips from €10 (train) | Weekends from €50",
+      "related_topics": ["travel", "weekend", "day trips", "europe"]
+    },
+    {
+      "topic": "life",
+      "question": "What free software can students get?",
+      "answer": "Free/discounted: Figma Pro (free for education), JetBrains IDEs (free), Notion (free), Adobe CC (45% off), Maxon One/Cinema4D (free), Webflow (student discount), Protopie (student license).",
+      "steps": [
+        "Figma Professional: Free for education (verify with HS email)",
+        "JetBrains IDEs: Free with student license",
+        "Notion: Free for education",
+        "Adobe Creative Cloud: 45% discount (€19.66/month)",
+        "Maxon One (Cinema4D, ZBrush): Free for students",
+        "Webflow: Student discount available",
+        "Protopie: Free student license"
+      ],
+      "source_url": "https://www.figma.com/education/",
+      "verified": true,
+      "cost": "Most free | Adobe: €19.66/month (45% off)",
+      "quick_links": [
+        {"label": "🎨 Figma Education", "url": "https://www.figma.com/education/higher-education/"},
+        {"label": "💻 JetBrains Student", "url": "https://www.jetbrains.com/shop/eform/students"},
+        {"label": "📝 Notion Education", "url": "https://www.notion.so/product/notion-for-education"},
+        {"label": "🎨 Adobe Student", "url": "https://www.adobe.com/es/creativecloud/buy/students.html"}
+      ],
+      "related_topics": ["software", "discounts", "design", "development"]
     }
   ]
