@@ -10,9 +10,12 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# semantic search
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+# Fix OpenMP conflict BEFORE importing sentence-transformers
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+os.environ['OMP_NUM_THREADS'] = '1'
+
+# Semantic search with embeddings
+from sentence_transformers import SentenceTransformer, util
 
 # Groq LLM
 from groq import Groq
@@ -37,13 +40,24 @@ def load_kb():
 
 KNOWLEDGE = load_kb()
 
-def build_semantic_index(kb):
-    texts = [f"{item.get('question','')} {item.get('topic','')}" for item in kb]
-    vec = TfidfVectorizer(stop_words="english")
-    X = vec.fit_transform(texts)
-    return vec, X
+# Load Sentence Transformer model
+print("🚀 Loading Sentence Transformer model (all-MiniLM-L6-v2)...")
+try:
+    EMBEDDING_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+    print("✅ Model loaded successfully!")
+except Exception as e:
+    print(f"❌ Error loading model: {e}")
+    raise
 
-VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
+def build_semantic_index(kb):
+    """Create embeddings for all questions in knowledge base"""
+    print(f"📊 Creating embeddings for {len(kb)} questions...")
+    texts = [f"{item.get('question','')} {item.get('answer','')[:100]}" for item in kb]
+    embeddings = EMBEDDING_MODEL.encode(texts, convert_to_tensor=True, show_progress_bar=False)
+    print("✅ Embeddings created!")
+    return embeddings
+
+KB_EMBEDDINGS = build_semantic_index(KNOWLEDGE)
 
 def init_db():
     con = sqlite3.connect(DB_PATH)
@@ -104,9 +118,9 @@ def home():
 
 @app.get("/reload")
 def reload_kb():
-    global KNOWLEDGE, VECTORIZER, KB_MATRIX
+    global KNOWLEDGE, KB_EMBEDDINGS
     KNOWLEDGE = load_kb()
-    VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
+    KB_EMBEDDINGS = build_semantic_index(KNOWLEDGE)
     return {"status": "reloaded", "items": len(KNOWLEDGE)}
 
 def get_question_rating_boost(question: str) -> float:
@@ -129,6 +143,38 @@ def get_question_rating_boost(question: str) -> float:
     # Boost: +0.05 per positive rating, max +0.1
     boost = min(0.1, (score / total) * 0.05)
     return boost
+
+def check_relevance_with_groq(query: str, matched_question: str, matched_answer: str) -> bool:
+    """Ask Groq if the matched answer is relevant to the user's query"""
+    try:
+        client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        
+        prompt = f"""You are a relevance checker. Determine if the ANSWER is relevant to the USER QUERY.
+
+USER QUERY: "{query}"
+
+MATCHED QUESTION: "{matched_question}"
+MATCHED ANSWER: "{matched_answer[:200]}..."
+
+Is this answer relevant to the user's query? Answer ONLY with "YES" or "NO".
+- YES: if the answer addresses the user's question
+- NO: if the answer is about a different topic
+
+Answer:"""
+        
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0,
+            max_tokens=10
+        )
+        
+        answer = response.choices[0].message.content.strip().upper()
+        return answer == "YES"
+        
+    except Exception as e:
+        print(f"Groq relevance check error: {e}")
+        return True  # If error, assume relevant (safer)
 
 def ask_groq_llm(query: str) -> str:
     """Fallback to Groq LLM when no answer found in knowledge base"""
@@ -171,6 +217,11 @@ def check_topic_relevance(query: str, matched_item: dict) -> bool:
     query_words = set(query_lower.split())
     question_words = set(question_lower.split())
     
+    # Check for non-KB query patterns (recommendations, jokes, weather, etc.)
+    non_kb_keywords = {'best', 'top', 'recommend', 'suggestion', 'joke', 'funny', 'weather', 'forecast', 'temperature', 'climate'}
+    if query_words & non_kb_keywords:
+        return False  # These should go to Groq AI
+    
     # Remove common words
     stop_words = {'how', 'to', 'what', 'where', 'when', 'why', 'is', 'are', 'the', 'a', 'an', 'in', 'on', 'at', 'for', 'with', 'about', 'tell', 'me', 'can', 'i', 'do', 'does', 'spain', 'spanish', 'barcelona'}
     query_keywords = query_words - stop_words
@@ -206,22 +257,42 @@ def check_topic_relevance(query: str, matched_item: dict) -> bool:
     return True
 
 @app.get("/ask", response_model=QAResponse)
-def ask(query: str, min_score: float = 0.45, autosave: bool = True):
-    q_vec = VECTORIZER.transform([query])
-    sims = cosine_similarity(q_vec, KB_MATRIX)[0]
+def ask(query: str, min_score: float = 0.35, autosave: bool = True):
+    # Encode query using Sentence Transformer
+    query_embedding = EMBEDDING_MODEL.encode(query, convert_to_tensor=True)
+    
+    # Calculate cosine similarity with all knowledge base embeddings
+    similarities = util.cos_sim(query_embedding, KB_EMBEDDINGS)[0]
     
     # Apply rating boost to similarity scores
     for idx, item in enumerate(KNOWLEDGE):
         question = item.get("question", "")
         boost = get_question_rating_boost(question)
-        sims[idx] += boost
+        similarities[idx] += boost
     
-    best_idx = int(sims.argmax())
-    best_score = float(sims[best_idx])
+    # Find best match
+    best_idx = int(similarities.argmax())
+    best_score = float(similarities[best_idx])
     best_item = KNOWLEDGE[best_idx]
     
-    # Check relevance
-    is_relevant = check_topic_relevance(query, best_item)
+    # Three-tier relevance check:
+    # 1. High confidence (>0.6): Use internal answer
+    # 2. Medium confidence (0.35-0.6): Ask Groq to verify relevance
+    # 3. Low confidence (<0.35): Go straight to Groq
+    
+    if best_score >= 0.6:
+        # High confidence - use internal answer directly
+        is_relevant = check_topic_relevance(query, best_item)
+    elif best_score >= min_score:
+        # Medium confidence - ask Groq to verify
+        is_relevant = check_relevance_with_groq(
+            query, 
+            best_item.get("question", ""),
+            best_item.get("answer", "")
+        )
+    else:
+        # Low confidence - skip to Groq
+        is_relevant = False
 
     if best_score >= min_score and is_relevant:
         item = KNOWLEDGE[best_idx]
