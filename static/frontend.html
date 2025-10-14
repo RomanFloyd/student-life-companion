@@ -9,6 +9,7 @@
     button { padding: 8px 12px; margin-top: 5px; }
     .card { border: 1px solid #ccc; padding: 15px; border-radius: 10px; margin-top: 10px; background: #f9f9f9; }
     .cost-badge { display: inline-block; background: #4CAF50; color: white; padding: 4px 10px; border-radius: 12px; font-size: 14px; font-weight: bold; margin-left: 10px; }
+    .deadline-badge { display: inline-block; background: #FF9800; color: white; padding: 4px 10px; border-radius: 12px; font-size: 14px; font-weight: bold; margin-left: 10px; }
     .contacts { margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 8px; }
     .contact-item { margin: 5px 0; }
     .contact-item a { color: #1976d2; text-decoration: none; font-weight: 500; }
@@ -16,6 +17,8 @@
     .quick-links { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
     .quick-link-btn { display: inline-block; padding: 8px 16px; background: #2196F3; color: white; text-decoration: none; border-radius: 6px; font-size: 14px; transition: background 0.3s; }
     .quick-link-btn:hover { background: #1976D2; }
+    .related-topics { margin-top: 15px; padding: 10px; background: #fff3e0; border-radius: 8px; border-left: 4px solid #FF9800; }
+    .related-tag { display: inline-block; background: #FFE0B2; color: #E65100; padding: 4px 10px; border-radius: 12px; font-size: 13px; margin: 3px; }
   </style>
 </head>
 <body style="background: white; color: black;">
@@ -76,16 +79,28 @@
     // Cost badge
     const costBadge = data.cost ? `<span class="cost-badge">💰 ${data.cost}</span>` : '';
     
+    // Deadline badge
+    const deadlineBadge = data.deadline ? `<span class="deadline-badge">${data.deadline}</span>` : '';
+    
+    // Related topics section
+    let relatedHTML = '';
+    if (data.related_topics && data.related_topics.length > 0) {
+      const tags = data.related_topics.map(topic => `<span class="related-tag">🔗 ${topic}</span>`).join('');
+      relatedHTML = `<div class="related-topics"><strong>📌 Related topics:</strong><br>${tags}</div>`;
+    }
+    
     document.querySelector('#answer').innerHTML = `
       <div class="card">
         <div><strong>Source:</strong> ${badge}
           ${data.source_url ? `&nbsp;•&nbsp;<a href="${data.source_url}" target="_blank">Official link</a>` : ""}
           ${costBadge}
+          ${deadlineBadge}
         </div>
         <p><strong>${data.answer}</strong></p>
         ${Array.isArray(data.steps) ? `<ol>${data.steps.map(s => `<li>${s}</li>`).join("")}</ol>` : ""}
         ${contactsHTML}
         ${quickLinksHTML}
+        ${relatedHTML}
       </div>
     `;
   }

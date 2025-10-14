@@ -24,12 +24,14 @@
       "source_url": "https://icp.administracionelectronica.gob.es",
       "verified": true,
       "cost": "€16.08",
+      "deadline": "⏰ Within 30 days of arrival in Spain",
       "contacts": [
         {"type": "email", "label": "Student Support", "value": "student.experience@harbour.space"}
       ],
       "quick_links": [
         {"label": "📅 Book Appointment", "url": "https://icp.administracionelectronica.gob.es"}
-      ]
+      ],
+      "related_topics": ["empadronamiento", "passport", "visa documents"]
     },
     {
       "topic": "visa",
@@ -44,7 +46,10 @@
         "Health insurance policy"
       ],
       "source_url": "https://www.inclusion.gob.es/",
-      "verified": true
+      "verified": true,
+      "cost": "€16.08",
+      "deadline": "⏰ Empadronamiento must be less than 3 months old",
+      "related_topics": ["empadronamiento", "toma de huellas", "passport"]
     },
     {
       "topic": "visa",
@@ -139,7 +144,8 @@
         {"label": "💬 Join Discord #housing", "url": "https://discord.gg/MYv8YTat"},
         {"label": "🏠 Search on Idealista", "url": "https://www.idealista.com/en/"},
         {"label": "🏠 Search on Spotahome", "url": "https://www.spotahome.com/"}
-      ]
+      ],
+      "related_topics": ["empadronamiento", "deposit", "rent prices"]
     },
     {
       "topic": "housing",
@@ -154,9 +160,11 @@
       "source_url": "https://seuelectronica.ajuntament.barcelona.cat/",
       "verified": true,
       "cost": "Free",
+      "deadline": "⏰ Required for TIE/NIE application",
       "quick_links": [
         {"label": "📅 Book Appointment", "url": "https://seuelectronica.ajuntament.barcelona.cat/oficinavirtual/form/diac-cites/es/citizen/sol/new/2393"}
-      ]
+      ],
+      "related_topics": ["TIE card", "bank account", "healthcare"]
     },
     {
       "topic": "housing",
@@ -210,9 +218,11 @@
       "source_url": "https://www.tmb.cat/",
       "verified": true,
       "cost": "€44 (90 days unlimited)",
+      "deadline": "⏰ Must be 30 years old or younger",
       "quick_links": [
         {"label": "🎫 Apply Online", "url": "https://www.tmb.cat/"}
-      ]
+      ],
+      "related_topics": ["T-Casual", "airport transport", "metro"]
     },
     {
       "topic": "transport",
@@ -266,13 +276,15 @@
       "source_url": "https://www.bancosantander.es/",
       "verified": true,
       "cost": "Free (student accounts)",
+      "deadline": "⏰ Bring empadronamiento (less than 3 months old)",
       "contacts": [
         {"type": "phone", "label": "María (Santander)", "value": "+34 691 14 63 42"},
         {"type": "email", "label": "María (Santander)", "value": "1548@gruposantander.es"}
       ],
       "quick_links": [
         {"label": "🏦 Open N26 Online", "url": "https://n26.com/en-eu/open-bank-account-in-spain"}
-      ]
+      ],
+      "related_topics": ["empadronamiento", "TIE card", "Spanish mobile"]
     },
     {
       "topic": "banking",
@@ -301,11 +313,13 @@
       "source_url": "https://www.digimobil.es/",
       "verified": true,
       "cost": "From €8/month",
+      "deadline": "⏰ Passport or TIE required by EU law",
       "quick_links": [
         {"label": "📱 Digi (€12 unlimited)", "url": "https://www.digimobil.es/movil/"},
         {"label": "📱 Lowi (€8 50GB)", "url": "https://www.lowi.es/tarifas-movil/"},
         {"label": "📱 Orange (€10 50GB)", "url": "https://www.orange.es/"}
-      ]
+      ],
+      "related_topics": ["eSIM", "bank account", "passport"]
     },
     {
       "topic": "mobile",
@@ -382,7 +396,7 @@
       "quick_links": [
         {"label": "💬 Join Discord", "url": "https://discord.gg/MYv8YTat"},
         {"label": "📚 Student Info (Notion)", "url": "https://harbour-space.notion.site/Student-Info-0fea282016e642249f814ab3fa375ad5"}
-      ]
+      ],
+      "related_topics": ["orientation", "discord", "student services"]
     }
   ]
-  
