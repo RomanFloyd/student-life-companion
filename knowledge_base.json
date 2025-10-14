@@ -398,5 +398,162 @@
         {"label": "📚 Student Info (Notion)", "url": "https://harbour-space.notion.site/Student-Info-0fea282016e642249f814ab3fa375ad5"}
       ],
       "related_topics": ["orientation", "discord", "student services"]
+    },
+    {
+      "topic": "university",
+      "question": "What is a Capstone Project at Harbour.Space?",
+      "answer": "Capstone is a mandatory 8 ECTS project spanning your final year (14 modules). It's hands-on work experience turning theory into real-world solutions.",
+      "steps": [
+        "Choose topic and define scope (student-led)",
+        "Submit Capstone Proposal by Nov 27",
+        "Pre-Evaluation in April for feedback",
+        "Final Presentation in July (Module 14)",
+        "Earn 8 ECTS credits toward 60 total"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "cost": "8 ECTS credits",
+      "deadline": "⏰ Proposal: Nov 27 | Pre-Eval: April | Final: July",
+      "contacts": [
+        {"type": "email", "label": "Academic Team", "value": "academics@harbour.space"}
+      ],
+      "related_topics": ["graduation", "portfolio", "thesis"]
+    },
+    {
+      "topic": "university",
+      "question": "What are Capstone Project options?",
+      "answer": "You can choose: Startup (MVP + pitch), Client Project (solution + report), Case Study (research paper), Portfolio (curated work), or Thesis (academic paper + defense).",
+      "steps": [
+        "Startup: Build MVP and pitch deck",
+        "Client Project: Implement solution with report",
+        "Case Study: Research paper with recommendations",
+        "Portfolio: Curated body of work with reflection",
+        "Thesis: Academic paper with defense"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "contacts": [
+        {"type": "email", "label": "Academic Team", "value": "academics@harbour.space"}
+      ],
+      "related_topics": ["capstone", "graduation", "final project"]
+    },
+    {
+      "topic": "university",
+      "question": "Can I study in Bangkok campus?",
+      "answer": "Yes! Harbour.Space has Bangkok campus with same 3-week module system. Bachelor's: no extra tuition. Master's: 50% tuition. You can earn UTCC double degree.",
+      "steps": [
+        "Short-term (non-credit): choose your length",
+        "Long-term (credit): full semester or year",
+        "Double Degree: complete long-term track for UTCC degree",
+        "Contact Academic Coordinator before booking flights"
+      ],
+      "source_url": "https://harbour.space/campus-bangkok",
+      "verified": true,
+      "cost": "Bachelor's: Free | Master's: 50% tuition",
+      "contacts": [
+        {"type": "email", "label": "Barcelona Coordinator (Aysylu)", "value": "aysylu.rakhmatullina@harbour.space"},
+        {"type": "email", "label": "Bangkok Coordinator (Amanda)", "value": "amandaa.aung@harbour.space"}
+      ],
+      "quick_links": [
+        {"label": "🌏 Bangkok Schedule", "url": "https://harbour.space/schedule/bangkok/2022-2023"}
+      ],
+      "related_topics": ["exchange", "double degree", "UTCC"]
+    },
+    {
+      "topic": "university",
+      "question": "What is UVic Double Degree Programme?",
+      "answer": "Combine Harbour.Space with University of Vic to earn TWO Master's degrees in 12-18 months. Up to 30 HSU credits transfer to UVic programme.",
+      "steps": [
+        "Contact Julia Dolgina (Admissions) to flag interest",
+        "Apply via standard Harbour.Space portal (no extra fee)",
+        "Complete 6 UVic core courses plus electives",
+        "Begin at Harbour.Space, finish at UVic (Vic or Barcelona)",
+        "Graduate with both degrees"
+      ],
+      "source_url": "https://harbour.space/barcelona/master/digital-transformation",
+      "verified": true,
+      "deadline": "⏰ Mind UVic intake dates - late applications not accepted",
+      "contacts": [
+        {"type": "email", "label": "Julia (Admissions)", "value": "julia.dolgina@harbour.space"}
+      ],
+      "quick_links": [
+        {"label": "📝 Apply Now", "url": "https://harbour.space/account/myprofile"}
+      ],
+      "related_topics": ["double degree", "master's", "UVic"]
+    },
+    {
+      "topic": "university",
+      "question": "What is the attendance policy at Harbour.Space?",
+      "answer": "Maximum 3 absences per 3-week module (1 unjustified + 2 justified). Being online when on-site, camera off, or 10+ min late counts as absence.",
+      "steps": [
+        "3-week module: max 3 absences (1 unjustified, 2 justified)",
+        "2-week module: max 2 absences",
+        "1-week module: max 1 absence",
+        "Justified absence needs doctor's note or official appointment",
+        "3+ absences = automatic course fail"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "deadline": "⏰ Communicate absences proactively before they happen",
+      "contacts": [
+        {"type": "email", "label": "Academic Queries", "value": "academics@harbour.space"},
+        {"type": "email", "label": "Personal Support (Julia)", "value": "julia.dolgina@harbour.space"},
+        {"type": "email", "label": "Personal Support (Aysylu)", "value": "aysylu.rakhmatullina@harbour.space"}
+      ],
+      "related_topics": ["purple code", "academic policy", "warnings"]
+    },
+    {
+      "topic": "university",
+      "question": "How to use the campus printer?",
+      "answer": "Connect to Members WiFi (PW: BCNHS54321), open http://192.168.20.212:8000/, use code 6813 for Department ID and PIN, go to Direct printing.",
+      "steps": [
+        "Connect to Members WiFi (Password: BCNHS54321)",
+        "Open browser: http://192.168.20.212:8000/",
+        "Enter code 6813 for Department ID and PIN",
+        "Go to 'Direct printing' on right side",
+        "Select format (PDF vs pictures)",
+        "Enable 'Enlarge print area' if margin too big"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "cost": "Free",
+      "related_topics": ["campus", "printing", "wifi"]
+    },
+    {
+      "topic": "university",
+      "question": "What is Referral Programme at Harbour.Space?",
+      "answer": "Earn rewards for referring new students! Students, alumni, faculty, and staff can refer unlimited people. Referral gets €50 off application fee (€75 instead of €125).",
+      "steps": [
+        "Get your personal promo code (check email or contact student.experience@harbour.space)",
+        "Share code with potential students",
+        "They use code when paying Application Fee (€50 discount)",
+        "When they enroll and pay tuition, you select reward voucher",
+        "No limit on number of referrals"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "cost": "Referral saves €50 on application (€75 instead of €125)",
+      "contacts": [
+        {"type": "email", "label": "Student Experience", "value": "student.experience@harbour.space"}
+      ],
+      "related_topics": ["rewards", "application", "promo code"]
+    },
+    {
+      "topic": "university",
+      "question": "How to get career support at Harbour.Space?",
+      "answer": "Access Talent Pool & Job Board, book 1-to-1 coaching for CV/portfolio reviews, join mentorship programs, attend workshops, and use resources library.",
+      "steps": [
+        "Explore Talent Pool for internships and graduate roles",
+        "Book CV reviews, portfolio critiques, mock interviews",
+        "Connect with industry mentors via Purple Tuesday talks",
+        "Attend workshops: salary negotiation, LinkedIn, visa Q&As",
+        "Use templates and ATS-proof CV guides from library"
+      ],
+      "source_url": "https://harbour.space/",
+      "verified": true,
+      "contacts": [
+        {"type": "email", "label": "Career Team", "value": "careers@harbour.space"}
+      ],
+      "related_topics": ["internship", "job search", "CV", "LinkedIn"]
     }
   ]
