@@ -13,7 +13,7 @@
     },
     {
       "topic": "visa",
-      "question": "How to book Toma de huellas appointment in Barcelona?",
+      "question": "How to book Toma de huellas appointment in Barcelona? Where to get fingerprints taken? How to book fingerprint appointment for TIE card?",
       "answer": "Book online at ICP portal. Slots open daily at 8:00 AM and disappear very fast.",
       "steps": [
         "Go to icp.administracionelectronica.gob.es",
@@ -35,7 +35,7 @@
     },
     {
       "topic": "visa",
-      "question": "What documents do I need for TIE card application?",
+      "question": "What documents do I need for TIE card application? How to get residence permit? How to apply for student residence card?",
       "answer": "You need passport with entry stamp, empadronamiento, EX-17 form, photo, tasa 790-012 receipt, and health insurance.",
       "steps": [
         "Passport + copy of photo page and entry stamp",
@@ -149,7 +149,7 @@
     },
     {
       "topic": "housing",
-      "question": "What is empadronamiento and why do I need it?",
+      "question": "What is empadronamiento and why do I need it? How to register my address in Barcelona? How to prove I live here? Where to get proof of residence?",
       "answer": "Empadronamiento is city residency registration. Mandatory for NIE/TIE, bank account, healthcare, and staying in Spain over 6 months.",
       "steps": [
         "Book appointment at OAC (Oficina d'Atenció Ciutadana)",
@@ -226,7 +226,7 @@
     },
     {
       "topic": "transport",
-      "question": "What is T-Casual card in Barcelona?",
+      "question": "What is T-Casual card in Barcelona? How much does metro cost? What are Barcelona transport prices?",
       "answer": "T-Casual is 10-trip ticket for €12.55 (Zone 1). Saves 50% per ride but NOT valid for airport metro.",
       "steps": [
         "Buy at metro stations or TMB app",
@@ -598,7 +598,7 @@
     },
     {
       "topic": "life",
-      "question": "What student discounts are available in Barcelona?",
+      "question": "Where can I get student discounts in Barcelona? What student discounts are available?",
       "answer": "Get Carnet Jove (€8.40/year, 8000+ discounts), Studentfy app (10-25% off 150+ cafés), UNiDAYS (Apple -8%, ASOS -10%), Student Beans (tech discounts), Adobe CC (45% off).",
       "steps": [
         "Carnet Jove Catalunya: €8.40/year for 8000+ discounts (up to age 30)",

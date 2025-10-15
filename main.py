@@ -41,6 +41,12 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# Fix OpenMP conflict BEFORE importing sentence-transformers
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+os.environ['OMP_NUM_THREADS'] = '1'
+
+# Semantic search with embeddings
+from sentence_transformers import SentenceTransformer, util
 
 # ===================================================================
 # CONFIGURATION
@@ -62,12 +68,20 @@ app = FastAPI(title="Student Life Companion")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # In production, replace with specific origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Global variables (initialized later)
+KNOWLEDGE = []
+KB_EMBEDDINGS = None
+VECTORIZER = None
+KB_MATRIX = None
+EMBEDDING_MODEL = None
+personal_intent_clf = None
+db = None
 
 # ===================================================================
 # PYDANTIC MODELS
@@ -160,9 +174,30 @@ def init_sqlite():
     con.close()
 
 
-# Initialize databases
-db = init_mongodb()
-init_sqlite()
+def save_history(response: QAResponse, query: str):
+    """
+    Save query and response to history database.
+    
+    Args:
+        response: QA response object
+        query: User's original query
+    """
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute(
+        "INSERT INTO history (ts, query, answer, matched_question, topic, similarity, source) VALUES (?,?,?,?,?,?,?)",
+        (
+            int(time.time()),
+            query,
+            response.answer,
+            response.matched_question,
+            response.topic,
+            response.similarity,
+            response.source
+        )
+    )
+    con.commit()
+    con.close()
 
 
 # ===================================================================
@@ -195,9 +230,21 @@ def build_semantic_index(kb: List[dict]) -> tuple:
     return vec, X
 
 
-# Initialize knowledge base
-KNOWLEDGE = load_kb()
-VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
+def build_embeddings_index(kb: List[dict]):
+    """
+    Create embeddings for all questions in knowledge base.
+    
+    Args:
+        kb: Knowledge base items
+        
+    Returns:
+        Tensor of embeddings
+    """
+    print(f"📊 Creating embeddings for {len(kb)} questions...")
+    texts = [f"{item.get('question','')} {item.get('answer','')[:100]}" for item in kb]
+    embeddings = EMBEDDING_MODEL.encode(texts, convert_to_tensor=True, show_progress_bar=False)
+    print("✅ Embeddings created!")
+    return embeddings
 
 
 # ===================================================================
@@ -307,8 +354,90 @@ def format_schedule(schedule_docs: List[dict]) -> str:
     return "\n".join(response_lines)
 
 
-# Train the personal intent model
-personal_intent_clf = train_personal_intent_model()
+# ===================================================================
+# INITIALIZATION
+# ===================================================================
+def initialize_application():
+    """Initialize all application components."""
+    global KNOWLEDGE, KB_EMBEDDINGS, VECTORIZER, KB_MATRIX, EMBEDDING_MODEL, personal_intent_clf, db
+    
+    print("🚀 Initializing Student Life Companion API...")
+    
+    # Initialize databases
+    print("📊 Connecting to databases...")
+    db = init_mongodb()
+    init_sqlite()
+    
+    # Load Sentence Transformer model
+    print("🤖 Loading Sentence Transformer model (all-MiniLM-L6-v2)...")
+    try:
+        EMBEDDING_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+        print("✅ Model loaded successfully!")
+    except Exception as e:
+        print(f"❌ Error loading model: {e}")
+        raise
+    
+    # Initialize knowledge base
+    print("📚 Loading knowledge base...")
+    KNOWLEDGE = load_kb()
+    VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
+    KB_EMBEDDINGS = build_embeddings_index(KNOWLEDGE)
+    print(f"✅ Knowledge base loaded with {len(KNOWLEDGE)} items")
+    
+    # Train personal intent model
+    personal_intent_clf = train_personal_intent_model()
+    
+    print("✅ Application initialized successfully!")
+
+
+# Initialize the application
+initialize_application()
+
+
+# ===================================================================
+# API ENDPOINTS - KNOWLEDGE BASE
+# ===================================================================
+@app.get("/reload")
+def reload_kb():
+    """Reload knowledge base and rebuild indexes."""
+    global KNOWLEDGE, KB_EMBEDDINGS, VECTORIZER, KB_MATRIX
+    KNOWLEDGE = load_kb()
+    VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
+    KB_EMBEDDINGS = build_embeddings_index(KNOWLEDGE)
+    return {"status": "reloaded", "items": len(KNOWLEDGE)}
+
+
+@app.get("/topics")
+def get_topics():
+    """Get all unique topics with counts from knowledge base."""
+    topics = {}
+    for item in KNOWLEDGE:
+        topic = item.get("topic", "other")
+        topics[topic] = topics.get(topic, 0) + 1
+    return {"topics": topics}
+
+
+@app.get("/questions/{topic}")
+def get_questions_by_topic(topic: str):
+    """
+    Get all questions for a specific topic.
+    
+    Args:
+        topic: Topic name to filter by
+        
+    Returns:
+        Dictionary with topic, count, and list of questions
+    """
+    questions = [
+        {
+            "question": item.get("question"),
+            "answer": item.get("answer"),
+            "topic": item.get("topic")
+        }
+        for item in KNOWLEDGE
+        if item.get("topic", "").lower() == topic.lower()
+    ]
+    return {"topic": topic, "count": len(questions), "questions": questions}
 
 
 # ===================================================================
@@ -344,27 +473,194 @@ def get_question_rating_boost(question: str) -> float:
     return boost
 
 
-def save_history(row: QAResponse, query: str):
+# ===================================================================
+# RELEVANCE CHECK FUNCTIONS
+# ===================================================================
+def check_relevance_with_groq(query: str, matched_question: str, matched_answer: str) -> bool:
     """
-    Save query and response to history database.
+    Ask Groq if the matched answer is relevant to the user's query.
     
     Args:
-        row: QA response object
-        query: User's original query
+        query: User's query
+        matched_question: Matched question from KB
+        matched_answer: Matched answer from KB
+        
+    Returns:
+        True if relevant, False otherwise
     """
-    con = sqlite3.connect(DB_PATH)
-    cur = con.cursor()
-    cur.execute(
-        "INSERT INTO history (ts, query, answer, matched_question, topic, similarity, source) VALUES (?,?,?,?,?,?,?)",
-        (int(time.time()), query, row.answer, row.matched_question, row.topic, row.similarity or None, row.source)
-    )
-    con.commit()
-    con.close()
+    try:
+        client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        
+        prompt = f"""You are a relevance checker. Determine if the ANSWER is relevant to the USER QUERY.
 
+USER QUERY: "{query}"
+
+MATCHED QUESTION: "{matched_question}"
+MATCHED ANSWER: "{matched_answer[:200]}..."
+
+Is this answer relevant to the user's query? Answer ONLY with "YES" or "NO".
+- YES: if the answer addresses the user's question
+- NO: if the answer is about a different topic
+
+Answer:"""
+        
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0,
+            max_tokens=10
+        )
+        
+        answer = response.choices[0].message.content.strip().upper()
+        return answer == "YES"
+        
+    except Exception as e:
+        print(f"Groq relevance check error: {e}")
+        return True  # If error, assume relevant (safer)
+
+def ask_groq_llm(query: str) -> str:
+    """
+    Fallback to Groq LLM when no answer found in knowledge base.
+    
+    Args:
+        query: User's question
+        
+    Returns:
+        LLM-generated answer
+    """
+    try:
+        api_key = os.getenv("GROQ_API_KEY")
+        
+        if not api_key:
+            return "I couldn't find an answer in my knowledge base. Please try rephrasing your question or contact student.experience@harbour.space"
+        
+        client = Groq(api_key=api_key)
+        
+        # Create context from knowledge base topics
+        topics = set(item.get("topic", "") for item in KNOWLEDGE)
+        context = f"You are a helpful AI assistant for Harbour.Space University students in Barcelona. You help with: {', '.join(topics)}. Be concise and helpful."
+        
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "system", "content": context},
+                {"role": "user", "content": query}
+            ],
+            temperature=0.7,
+            max_tokens=500
+        )
+        
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"Groq API error: {e}")
+        return "I couldn't find an answer in my knowledge base. Please try rephrasing your question or contact student.experience@harbour.space"
 
 # ===================================================================
-# LLM INTEGRATION
+# RELEVANCE CHECK FUNCTIONS
 # ===================================================================
+def check_topic_relevance(query: str, matched_item: dict) -> bool:
+    """
+    Check if matched question is actually relevant to the query.
+    
+    Args:
+        query: User's query
+        matched_item: Matched knowledge base item
+        
+    Returns:
+        True if relevant, False otherwise
+    """
+    query_lower = query.lower()
+    question_lower = matched_item.get("question", "").lower()
+    answer_lower = matched_item.get("answer", "").lower()
+    topic = matched_item.get("topic", "")
+    
+    # Extract key nouns from query (simple approach)
+    query_words = set(query_lower.split())
+    question_words = set(question_lower.split())
+    
+    # Check for non-KB query patterns (recommendations, jokes, weather, etc.)
+    non_kb_keywords = {'best', 'top', 'recommend', 'suggestion', 'joke', 'funny', 'weather', 'forecast', 'temperature', 'climate'}
+    if query_words & non_kb_keywords:
+        return False  # These should go to Groq AI
+    
+    # Remove common words
+    stop_words = {'how', 'to', 'what', 'where', 'when', 'why', 'is', 'are', 'the', 'a', 'an', 'in', 'on', 'at', 'for', 'with', 'about', 'tell', 'me', 'can', 'i', 'do', 'does', 'spain', 'spanish', 'barcelona'}
+    query_keywords = query_words - stop_words
+    question_keywords = question_words - stop_words
+    
+    # Check if at least one meaningful keyword matches (excluding generic location words)
+    common_keywords = query_keywords & question_keywords
+    
+    # If no common keywords, probably not relevant
+    if len(common_keywords) == 0:
+        return False
+    
+    # If only "spanish" or "barcelona" matches, not relevant enough
+    if common_keywords <= {'spanish', 'barcelona', 'spain'}:
+        return False
+    
+    # Check topic relevance
+    topic_keywords = {
+        'visa': {'visa', 'tie', 'residence', 'permit', 'immigration', 'extranjeria'},
+        'work': {'work', 'job', 'employment', 'internship', 'salary'},
+        'housing': {'housing', 'apartment', 'flat', 'rent', 'empadronamiento', 'landlord'},
+        'transport': {'transport', 'metro', 'bus', 'train', 'tjove', 'ticket'},
+        'mobile': {'mobile', 'phone', 'sim', 'esim', 'vodafone', 'movistar'},
+        'university': {'programming', 'coding', 'computer', 'science', 'capstone', 'module', 'exam', 'grade', 'professor'},
+        'life': {'language', 'school', 'course', 'food', 'restaurant', 'beach', 'discount', 'fish', 'seafood'}
+    }
+    
+    # If query has specific topic keywords but matched different topic, reject
+    for topic_name, keywords in topic_keywords.items():
+        if query_keywords & keywords and topic != topic_name:
+            return False
+    
+    return True
+
+
+def check_relevance_with_groq(query: str, matched_question: str, matched_answer: str) -> bool:
+    """
+    Ask Groq if the matched answer is relevant to the user's query.
+    
+    Args:
+        query: User's query
+        matched_question: Matched question from KB
+        matched_answer: Matched answer from KB
+        
+    Returns:
+        True if relevant, False otherwise
+    """
+    try:
+        client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        
+        prompt = f"""You are a relevance checker. Determine if the ANSWER is relevant to the USER QUERY.
+
+USER QUERY: "{query}"
+
+MATCHED QUESTION: "{matched_question}"
+MATCHED ANSWER: "{matched_answer[:200]}..."
+
+Is this answer relevant to the user's query? Answer ONLY with "YES" or "NO".
+- YES: if the answer addresses the user's question
+- NO: if the answer is about a different topic
+
+Answer:"""
+        
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0,
+            max_tokens=10
+        )
+        
+        answer = response.choices[0].message.content.strip().upper()
+        return answer == "YES"
+        
+    except Exception as e:
+        print(f"Groq relevance check error: {e}")
+        return True  # If error, assume relevant (safer)
+
+
 def ask_groq_llm(query: str) -> str:
     """
     Fallback to Groq LLM when no answer found in knowledge base.
@@ -404,141 +700,58 @@ def ask_groq_llm(query: str) -> str:
 
 
 # ===================================================================
-# API ENDPOINTS - HEALTH CHECK
-# ===================================================================
-@app.get("/")
-def home():
-    """API health check endpoint."""
-    return {"message": "Student Life Companion API is running"}
-
-
-@app.get("/reload")
-def reload_kb():
-    """Reload knowledge base from file."""
-    global KNOWLEDGE, VECTORIZER, KB_MATRIX
-    KNOWLEDGE = load_kb()
-    VECTORIZER, KB_MATRIX = build_semantic_index(KNOWLEDGE)
-    return {"status": "reloaded", "items": len(KNOWLEDGE)}
-
-
-# ===================================================================
-# API ENDPOINTS - PERSONAL ASSISTANT
-# ===================================================================
-@app.post("/ask/personal", response_model=PersonalResponse)
-def ask_personal_assistant(p_query: PersonalQuery):
-    """
-    Personal assistant endpoint for user-specific queries.
-    Requires user_id to enforce privacy.
-    
-    Args:
-        p_query: Personal query with user_id and question
-        
-    Returns:
-        PersonalResponse with intent and answer
-    """
-    if db is None or personal_intent_clf is None:
-        raise HTTPException(
-            status_code=503, 
-            detail="The personal assistant is currently unavailable due to a database connection issue."
-        )
-
-    user_id = p_query.user_id
-    query = p_query.query
-
-    # Predict the intent
-    intent = personal_intent_clf.predict([query])[0]
-    
-    response_data = "I am sorry, I can't answer that."
-
-    # --- Logic for get_my_schedule ---
-    if intent == "get_my_schedule":
-        schedule_cursor = db.schedules.find({"studentId": ObjectId(user_id)})
-        schedule_list = list(schedule_cursor)
-        response_data = format_schedule(schedule_list)
-
-    # --- Logic for list_my_groups ---
-    elif intent == "list_my_groups":
-        groups_cursor = db.groups.find({"members": ObjectId(user_id)}, {"name": 1, "description": 1})
-        groups_list = list(groups_cursor)
-        
-        if not groups_list:
-            response_data = "You are not a member of any groups yet. Join groups from the Community section to connect with other students!"
-        else:
-            response_lines = [f"You are a member of {len(groups_list)} group(s):\n"]
-            for idx, group in enumerate(groups_list, 1):
-                group_name = group.get("name", "Unknown Group")
-                group_desc = group.get("description", "No description available")
-                response_lines.append(f"{idx}. **{group_name}**")
-                response_lines.append(f"   {group_desc}\n")
-            response_data = "\n".join(response_lines)
-
-    # --- Logic for get_course_info (public info) ---
-    elif intent == "get_course_info":
-        all_courses = list(db.courses.find({}, {"name": 1, "teacher": 1, "room": 1, "description": 1}))
-        found = False
-        for course in all_courses:
-            if course['name'].lower() in query.lower():
-                course_name = course.get('name', 'Unknown Course')
-                teacher = course.get('teacher', 'Not assigned')
-                room = course.get('room', 'TBD')
-                description = course.get('description', 'No description available')
-                
-                response_lines = [
-                    f"**{course_name}**\n",
-                    f"👨‍🏫 **Teacher:** {teacher}",
-                    f"🏫 **Room:** {room}",
-                    f"\n📖 **Description:**",
-                    f"{description}"
-                ]
-                response_data = "\n".join(response_lines)
-                found = True
-                break
-        if not found:
-            response_data = "I could not find information on that specific course. Please check the course name and try again."
-        
-    elif intent == "greet":
-        response_data = "Hello! How can I help you with your university life?"
-    
-    elif intent == "goodbye":
-        response_data = "Goodbye! Have a great day."
-
-    else:
-        # Fallback for recognized but not yet implemented intents
-        response_data = "I understand you're asking about a personal topic, but I don't have that capability yet."
-
-    return PersonalResponse(intent=intent, response=response_data)
-
-
-# ===================================================================
 # API ENDPOINTS - Q&A
 # ===================================================================
 @app.get("/ask", response_model=QAResponse)
-def ask(query: str, min_score: float = DEFAULT_MIN_SCORE, autosave: bool = True):
+def ask(query: str, min_score: float = 0.35, autosave: bool = True):
     """
-    Main Q&A endpoint using semantic search over knowledge base.
+    Answer questions using semantic search and LLM fallback.
     
     Args:
         query: User's question
-        min_score: Minimum similarity score threshold
+        min_score: Minimum similarity score for internal answers
         autosave: Whether to save query to history
         
     Returns:
         QAResponse with answer and metadata
     """
-    q_vec = VECTORIZER.transform([query])
-    sims = cosine_similarity(q_vec, KB_MATRIX)[0]
+    # Encode query using Sentence Transformer
+    query_embedding = EMBEDDING_MODEL.encode(query, convert_to_tensor=True)
+    
+    # Calculate cosine similarity with all knowledge base embeddings
+    similarities = util.cos_sim(query_embedding, KB_EMBEDDINGS)[0]
     
     # Apply rating boost to similarity scores
     for idx, item in enumerate(KNOWLEDGE):
         question = item.get("question", "")
         boost = get_question_rating_boost(question)
-        sims[idx] += boost
+        similarities[idx] += boost
     
-    best_idx = int(sims.argmax())
-    best_score = float(sims[best_idx])
+    # Find best match
+    best_idx = int(similarities.argmax())
+    best_score = float(similarities[best_idx])
+    best_item = KNOWLEDGE[best_idx]
+    
+    # Three-tier relevance check:
+    # 1. High confidence (>0.6): Use internal answer
+    # 2. Medium confidence (0.35-0.6): Ask Groq to verify relevance
+    # 3. Low confidence (<0.35): Go straight to Groq
+    
+    if best_score >= 0.6:
+        # High confidence - use internal answer directly
+        is_relevant = check_topic_relevance(query, best_item)
+    elif best_score >= min_score:
+        # Medium confidence - ask Groq to verify
+        is_relevant = check_relevance_with_groq(
+            query, 
+            best_item.get("question", ""),
+            best_item.get("answer", "")
+        )
+    else:
+        # Low confidence - skip to Groq
+        is_relevant = False
 
-    # Semantic match found
-    if best_score >= min_score:
+    if best_score >= min_score and is_relevant:
         item = KNOWLEDGE[best_idx]
         resp = QAResponse(
             answer=item.get("answer", ""),
@@ -602,39 +815,6 @@ def ask(query: str, min_score: float = DEFAULT_MIN_SCORE, autosave: bool = True)
     if autosave:
         save_history(resp, query)
     return resp
-
-
-@app.get("/topics")
-def get_topics():
-    """Get all unique topics with counts from knowledge base."""
-    topics = {}
-    for item in KNOWLEDGE:
-        topic = item.get("topic", "other")
-        topics[topic] = topics.get(topic, 0) + 1
-    return {"topics": topics}
-
-
-@app.get("/questions/{topic}")
-def get_questions_by_topic(topic: str):
-    """
-    Get all questions for a specific topic.
-    
-    Args:
-        topic: Topic name to filter by
-        
-    Returns:
-        Dictionary with topic, count, and list of questions
-    """
-    questions = [
-        {
-            "question": item.get("question"),
-            "answer": item.get("answer"),
-            "topic": item.get("topic")
-        }
-        for item in KNOWLEDGE
-        if item.get("topic", "").lower() == topic.lower()
-    ]
-    return {"topic": topic, "count": len(questions), "questions": questions}
 
 
 # ===================================================================
