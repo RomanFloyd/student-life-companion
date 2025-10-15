@@ -6,4 +6,6 @@ scipy
 groq
 python-dotenv
 sentence-transformers
+python-telegram-bot
+httpx
 
