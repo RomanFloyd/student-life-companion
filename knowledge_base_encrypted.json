@@ -1,0 +1,5160 @@
+{
+  "users": [
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a1"
+      },
+      "name": "Maxim Musin",
+      "email": "maxim.musin@harbour.space",
+      "password": "$2b$12$dsqIuxgiza7qpMvLzmSwXu1G3Em6CQnmccBXPQhAR8ShyPfsEibze",
+      "role": "admin",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a2"
+      },
+      "name": "Haythem Ben Jbara",
+      "email": "haythem.benjbara@harbour.space",
+      "password": "$2b$12$7/MKpokakAXbpKrAjY1qq.4hES0.QR4WzzIGfH3lYzL8r0m0m2BPm",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a3"
+      },
+      "name": "Roman Abrosimov",
+      "email": "roman.abrosimov@harbour.space",
+      "password": "$2b$12$2yp17/ZgOWXQ9ym6sYnAVO2CUTEE4XrERpgWleqWA66h906hYnXKa",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a4"
+      },
+      "name": "Berat Furkan Kocak",
+      "email": "berat.kocak@harbour.space",
+      "password": "$2b$12$x6Hj4wrKULk8Zz9uc1UmK.k1qG0nCqh03M3bSA4P2MEiYXP0/EIxO",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a5"
+      },
+      "name": "Jamil Hamdan",
+      "email": "jamil.hamdan@harbour.space",
+      "password": "$2b$12$4gDa7aYjHC4lZskuJLpgjODEPexFB9qwIDFEdSGtOBHGTgsPKYd.i",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a6"
+      },
+      "name": "Samed Alhajajla",
+      "email": "samed.alhajajla@harbour.space",
+      "password": "$2b$12$IhLsI7Cg7fnQ7XPpLoBTr.TTN7XdnIlYMI3u94G5/Cl9wi10BIuf.",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a7"
+      },
+      "name": "Andreev Mikhail",
+      "email": "andreev.mikhail@harbour.space",
+      "password": "$2b$12$smOqhbaUvXqB./6LFvMqR.1SrRPCLIZyllEUPH977zHLt3i4MOIh.",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a8"
+      },
+      "name": "Arslanov Shamil",
+      "email": "arslanov.shamil@harbour.space",
+      "password": "$2b$12$fJb41/L2tddhrj5pJL/RD.MyY0NjmF7Jt5dMDKyKpxDWHmqFae46C",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32a9"
+      },
+      "name": "Nikita Tsekhomskiy",
+      "email": "nikita.tsekhomskiy@harbour.space",
+      "password": "$2b$12$9YC7tPI6.4lh78Jf9nvDmukrnKazFTP7vm2qCnfiNM/V8spAHyr0.",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32aa"
+      },
+      "name": "Viacheslav Silchenko",
+      "email": "viacheslav.silchenko@harbour.space",
+      "password": "$2b$12$Yy2sVelsy5fwNxXJFbfp0eHacr/S1rhnDBPnBkmK4U9DwrzeGtz6C",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ab"
+      },
+      "name": "Aung Min Myat",
+      "email": "aung.myat@harbour.space",
+      "password": "$2b$12$O4pV8UQ60yJFT/TGZkK.reC3mOoTjhLsecDC3ODD3R6iW7LnKCbSO",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ac"
+      },
+      "name": "Giorgi Kurtanidze",
+      "email": "giorgi.kurtanidze@harbour.space",
+      "password": "$2b$12$DiVSnq5AOxBmfcmIhd3FPOu8xIefKAjSbmQhWe.VccoAJC9BBOGbG",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ad"
+      },
+      "name": "Levan Dalbashvili",
+      "email": "levan.dalbashvili@harbour.space",
+      "password": "$2b$12$td1dBAdlG24QFjee9JutA.2ylHQNpGF4y.7.37L6K6VCuSS/xtUPK",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ae"
+      },
+      "name": "Wai Lin Aung",
+      "email": "wai.aung@harbour.space",
+      "password": "$2b$12$nsyffs41kG04dWhGQ9BwvOL9vT3d7F9ydWfTLsx1fLplv5b9UjtJC",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32af"
+      },
+      "name": "Dias Sarkytbayev",
+      "email": "dias.sarkytbayev@harbour.space",
+      "password": "$2b$12$YHb71lhyVW7cFUfmJ2FR1uC5wCJ0DIcxqmaBBFEaiooOCVz/Df9lK",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b0"
+      },
+      "name": "Sergei Poluektov",
+      "email": "sergei.poluektov@harbour.space",
+      "password": "$2b$12$lJxHE00mVmwpqj52vSf3qOQoHzRxXUVK8Fbe6qcjC389dUgRRiaUG",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b1"
+      },
+      "name": "Elizabeth",
+      "email": "elizabeth@harbour.space",
+      "password": "$2b$12$14qUPC09C4CDVPjxoGFLqeLHbTHYW3/2/nU9v8IYbRPQXugPZV3Xq",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b2"
+      },
+      "name": "Student 18",
+      "email": "student18@harbour.space",
+      "password": "$2b$12$6DlYxcG.I//V1iqIjQ5U8.p9d6JsNdcSadf7it2FgtoRsWzmVolLi",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b3"
+      },
+      "name": "Student 19",
+      "email": "student19@harbour.space",
+      "password": "$2b$12$C97u/xCNLZUewPA4l4Eub.coz5oCZQwXvoDjFSowVxyN6STijt.UC",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b4"
+      },
+      "name": "Student 20",
+      "email": "student20@harbour.space",
+      "password": "$2b$12$zbNOhKrd6GsF8LFJ6AoCb.vh73IHbCS1.RvaP014pxDzIyspapEPG",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b5"
+      },
+      "name": "Student 21",
+      "email": "student21@harbour.space",
+      "password": "$2b$12$kWr3ge8.3Rhx/eARyKau6erRZ5ctfNpMq/SYpiveyFElIFm7ZPmz2",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b6"
+      },
+      "name": "Student 22",
+      "email": "student22@harbour.space",
+      "password": "$2b$12$Ig3J3RPzNey.6./1QS.yaOLQFJyY03kh8QVhpG2DUNpuj.zhnbrZG",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b7"
+      },
+      "name": "Student 23",
+      "email": "student23@harbour.space",
+      "password": "$2b$12$a/62lCvTNA2I9Xi6EKWXWOPn4Jy3M4ZD0MbPFMjjIX8.uFPmaGRvK",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b8"
+      },
+      "name": "Student 24",
+      "email": "student24@harbour.space",
+      "password": "$2b$12$T.6s91IRM9jvKTD8RW/5DOtctlxM4OqQCZ4xDtj8gZvJ51TmHYjhO",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32b9"
+      },
+      "name": "Student 25",
+      "email": "student25@harbour.space",
+      "password": "$2b$12$B9o./sKHC9BzmIRGJb83uelEoDpU1vZrC8AMSEbRuyLGexLWjnoj6",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ba"
+      },
+      "name": "Student 26",
+      "email": "student26@harbour.space",
+      "password": "$2b$12$Q6mkv7rnufKL7/hyfeCv.OLpTVfaapv1f86JLBTkLqK/wJz6NVHKy",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32bb"
+      },
+      "name": "Student 27",
+      "email": "student27@harbour.space",
+      "password": "$2b$12$efs9tK84TnrcGNahwdFRx.lZvXz1DQkApr3UngB1awHlNeFIMwuQG",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32bc"
+      },
+      "name": "Student 28",
+      "email": "student28@harbour.space",
+      "password": "$2b$12$a0EcY9xPGk.5ClEZYETVBeNqdcOXqLIuLLPJeDVKfAS8PNzKoo79G",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32bd"
+      },
+      "name": "Student 29",
+      "email": "student29@harbour.space",
+      "password": "$2b$12$ivfwLJzJ1jDU3JlLnjH4zuLC/Jn.YObpx0U6IKGgR84U/GU83GwKu",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32be"
+      },
+      "name": "Student 30",
+      "email": "student30@harbour.space",
+      "password": "$2b$12$PSnJ8WcIf6md2Mj34/cahebLzub4U5h7gYoLx9VauOimkHHNc68yK",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32bf"
+      },
+      "name": "Student 31",
+      "email": "student31@harbour.space",
+      "password": "$2b$12$Ia3Z5IH6szRmjXwBK5v7Zu4VisEO1Sk8qyrNd1EiuaWxO2bIAUgC2",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c0"
+      },
+      "name": "Student 32",
+      "email": "student32@harbour.space",
+      "password": "$2b$12$M8ea7wTomZPTFkvXTVDsVOGVNyM08EzJVoRKpQ5Dv4Vz36G.wm1dS",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c1"
+      },
+      "name": "Student 33",
+      "email": "student33@harbour.space",
+      "password": "$2b$12$9nWfhH3gk6hVnV9aD68tt.trbiunPxAck6PiVu0fWHN7eV2Slyktq",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c2"
+      },
+      "name": "Student 34",
+      "email": "student34@harbour.space",
+      "password": "$2b$12$6/Kqq1CqOSzKGRjN0iuFwuWHuGR9z1JWCAnMoOvgmRrbMilSKyXdm",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c3"
+      },
+      "name": "Student 35",
+      "email": "student35@harbour.space",
+      "password": "$2b$12$6nSbRGSy73hliPMkbA4PAufw52RduV.q20Mrb/MgKQoAWUUnrN2NO",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c4"
+      },
+      "name": "Student 36",
+      "email": "student36@harbour.space",
+      "password": "$2b$12$ASqfY3DL/mrXUyf/1wAaeuwoUS8tjA6aAVRd5emSxX9WPyKdjUklm",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c5"
+      },
+      "name": "Student 37",
+      "email": "student37@harbour.space",
+      "password": "$2b$12$V3muxoVn.srFmPb/4ljFk.VMcpURJnSv6sEZayAr5RhVkdSRk7ZNW",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c6"
+      },
+      "name": "Student 38",
+      "email": "student38@harbour.space",
+      "password": "$2b$12$zQEamkHR1rUkfP1EhslbueoBQS0n8Vaus.aFvl95H8UOHwyH7MCJq",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c7"
+      },
+      "name": "Student 39",
+      "email": "student39@harbour.space",
+      "password": "$2b$12$LNj4.iwcLZLa6fghf7jL2OwkZiRWRTIqE5wkbma4IXmI8qEkpsgfO",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c8"
+      },
+      "name": "Student 40",
+      "email": "student40@harbour.space",
+      "password": "$2b$12$U5Nue.V5IE7xeK8cGWLEGuPRXc80WQuEnAKoSbyjuocXjwgc81rfS",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32c9"
+      },
+      "name": "Student 41",
+      "email": "student41@harbour.space",
+      "password": "$2b$12$p2NPKYt8Ka2X36xUL0YBveiz2ZPmW9MHr1TJwwHpRfUbqlFc/As..",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ca"
+      },
+      "name": "Student 42",
+      "email": "student42@harbour.space",
+      "password": "$2b$12$7cbVPeHnIUHcUjauEQOkeuvlOeFXhj/Y90zOOg4ev93OmUssH1L7G",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32cb"
+      },
+      "name": "Student 43",
+      "email": "student43@harbour.space",
+      "password": "$2b$12$zGFBCK.rhWmn5GybPapbj.U7lMmYgra0kj4rn2ap8ZJEmv8Avj/Qa",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32cc"
+      },
+      "name": "Student 44",
+      "email": "student44@harbour.space",
+      "password": "$2b$12$BYxzK5PXC1Zv8sTuRi2kKusgnDo9RcyOoOvXrUuxNTsCmsMnuu.s6",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32cd"
+      },
+      "name": "Student 45",
+      "email": "student45@harbour.space",
+      "password": "$2b$12$hatd7sbGHZnDFDPUDRiqReQ6otgif6g61xY5s0y/lMoyez9p6qfni",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ce"
+      },
+      "name": "Student 46",
+      "email": "student46@harbour.space",
+      "password": "$2b$12$rn5ZXjXi9Uinszs1AKmEeOoT31CVnZWXzJ1QnEdWFSL22jQXr2gtq",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32cf"
+      },
+      "name": "Student 47",
+      "email": "student47@harbour.space",
+      "password": "$2b$12$o6b604AMqJxC4qBME7VsMuqjXyYKsVTeQPfCNX/NFEh2GEqNkHN6e",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d0"
+      },
+      "name": "Student 48",
+      "email": "student48@harbour.space",
+      "password": "$2b$12$mV9jBpf2C4XvYzbHdIx85uT7Sf4hPyFITGwsaP7Mahp11G/SoLSOi",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d1"
+      },
+      "name": "Student 49",
+      "email": "student49@harbour.space",
+      "password": "$2b$12$/hQs4c23Gq3t0Q3y/xZY.utUExso3WHIFw7JSsDd5WKMurHJsP6mG",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d2"
+      },
+      "name": "Student 50",
+      "email": "student50@harbour.space",
+      "password": "$2b$12$nuvDQFdM7Dd4MQ3EBcI8QOtkkiuV6CU8D/woQgH1aja1FD55hdOle",
+      "role": "student",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d3"
+      },
+      "name": "Introduction to Computer Science",
+      "teacher": "Dr. Smith",
+      "room": "101",
+      "description": "An introductory course to the fundamentals of computer science.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d4"
+      },
+      "name": "Data Structures and Algorithms",
+      "teacher": "Dr. Johnson",
+      "room": "102",
+      "description": "A course on the design and analysis of data structures and algorithms.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d5"
+      },
+      "name": "Database Systems",
+      "teacher": "Dr. Williams",
+      "room": "103",
+      "description": "A course on the design and implementation of database systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d6"
+      },
+      "name": "Operating Systems",
+      "teacher": "Dr. Brown",
+      "room": "104",
+      "description": "A course on the design and implementation of operating systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d7"
+      },
+      "name": "Computer Networks",
+      "teacher": "Dr. Jones",
+      "room": "105",
+      "description": "A course on the design and implementation of computer networks.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d8"
+      },
+      "name": "Software Engineering",
+      "teacher": "Dr. Garcia",
+      "room": "201",
+      "description": "A course on the design and implementation of software systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32d9"
+      },
+      "name": "Artificial Intelligence",
+      "teacher": "Dr. Miller",
+      "room": "202",
+      "description": "A course on the design and implementation of artificial intelligence systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32da"
+      },
+      "name": "Machine Learning",
+      "teacher": "Dr. Davis",
+      "room": "203",
+      "description": "A course on the design and implementation of machine learning systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32db"
+      },
+      "name": "Computer Graphics",
+      "teacher": "Dr. Rodriguez",
+      "room": "204",
+      "description": "A course on the design and implementation of computer graphics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32dc"
+      },
+      "name": "Computer Vision",
+      "teacher": "Dr. Martinez",
+      "room": "205",
+      "description": "A course on the design and implementation of computer vision systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32dd"
+      },
+      "name": "Natural Language Processing",
+      "teacher": "Dr. Hernandez",
+      "room": "301",
+      "description": "A course on the design and implementation of natural language processing systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32de"
+      },
+      "name": "Robotics",
+      "teacher": "Dr. Lopez",
+      "room": "302",
+      "description": "A course on the design and implementation of robotic systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32df"
+      },
+      "name": "Cybersecurity",
+      "teacher": "Dr. Gonzalez",
+      "room": "303",
+      "description": "A course on the design and implementation of cybersecurity systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e0"
+      },
+      "name": "Cloud Computing",
+      "teacher": "Dr. Wilson",
+      "room": "304",
+      "description": "A course on the design and implementation of cloud computing systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e1"
+      },
+      "name": "Mobile App Development",
+      "teacher": "Dr. Anderson",
+      "room": "305",
+      "description": "A course on the design and implementation of mobile applications.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e2"
+      },
+      "name": "Web Development",
+      "teacher": "Dr. Thomas",
+      "room": "401",
+      "description": "A course on the design and implementation of web applications.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e3"
+      },
+      "name": "Game Development",
+      "teacher": "Dr. Jackson",
+      "room": "402",
+      "description": "A course on the design and implementation of video games.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e4"
+      },
+      "name": "Data Science",
+      "teacher": "Dr. White",
+      "room": "403",
+      "description": "A course on the design and implementation of data science systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e5"
+      },
+      "name": "Big Data",
+      "teacher": "Dr. Harris",
+      "room": "404",
+      "description": "A course on the design and implementation of big data systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e6"
+      },
+      "name": "Internet of Things",
+      "teacher": "Dr. Martin",
+      "room": "405",
+      "description": "A course on the design and implementation of Internet of Things systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e7"
+      },
+      "name": "Blockchain",
+      "teacher": "Dr. Thompson",
+      "room": "501",
+      "description": "A course on the design and implementation of blockchain systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e8"
+      },
+      "name": "Quantum Computing",
+      "teacher": "Dr. Garcia",
+      "room": "502",
+      "description": "A course on the design and implementation of quantum computing systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32e9"
+      },
+      "name": "Bioinformatics",
+      "teacher": "Dr. Martinez",
+      "room": "503",
+      "description": "A course on the design and implementation of bioinformatics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ea"
+      },
+      "name": "Computational Linguistics",
+      "teacher": "Dr. Robinson",
+      "room": "504",
+      "description": "A course on the design and implementation of computational linguistics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32eb"
+      },
+      "name": "Computer Architecture",
+      "teacher": "Dr. Clark",
+      "room": "505",
+      "description": "A course on the design and implementation of computer architecture systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ec"
+      },
+      "name": "Compiler Design",
+      "teacher": "Dr. Rodriguez",
+      "room": "601",
+      "description": "A course on the design and implementation of compilers.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ed"
+      },
+      "name": "Software Testing",
+      "teacher": "Dr. Lewis",
+      "room": "602",
+      "description": "A course on the design and implementation of software testing systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ee"
+      },
+      "name": "Software Project Management",
+      "teacher": "Dr. Lee",
+      "room": "603",
+      "description": "A course on the design and implementation of software project management systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ef"
+      },
+      "name": "Human-Computer Interaction",
+      "teacher": "Dr. Walker",
+      "room": "604",
+      "description": "A course on the design and implementation of human-computer interaction systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f0"
+      },
+      "name": "Information Retrieval",
+      "teacher": "Dr. Hall",
+      "room": "605",
+      "description": "A course on the design and implementation of information retrieval systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f1"
+      },
+      "name": "Data Mining",
+      "teacher": "Dr. Allen",
+      "room": "701",
+      "description": "A course on the design and implementation of data mining systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f2"
+      },
+      "name": "Computer Forensics",
+      "teacher": "Dr. Young",
+      "room": "702",
+      "description": "A course on the design and implementation of computer forensics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f3"
+      },
+      "name": "Cryptography",
+      "teacher": "Dr. Hernandez",
+      "room": "703",
+      "description": "A course on the design and implementation of cryptography systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f4"
+      },
+      "name": "Computer Ethics",
+      "teacher": "Dr. King",
+      "room": "704",
+      "description": "A course on the design and implementation of computer ethics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f5"
+      },
+      "name": "Theory of Computation",
+      "teacher": "Dr. Wright",
+      "room": "705",
+      "description": "A course on the design and implementation of theory of computation systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f6"
+      },
+      "name": "Linear Algebra",
+      "teacher": "Dr. Lopez",
+      "room": "801",
+      "description": "A course on the design and implementation of linear algebra systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f7"
+      },
+      "name": "Calculus",
+      "teacher": "Dr. Hill",
+      "room": "802",
+      "description": "A course on the design and implementation of calculus systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f8"
+      },
+      "name": "Discrete Mathematics",
+      "teacher": "Dr. Scott",
+      "room": "803",
+      "description": "A course on the design and implementation of discrete mathematics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32f9"
+      },
+      "name": "Probability and Statistics",
+      "teacher": "Dr. Green",
+      "room": "804",
+      "description": "A course on the design and implementation of probability and statistics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32fa"
+      },
+      "name": "Numerical Analysis",
+      "teacher": "Dr. Adams",
+      "room": "805",
+      "description": "A course on the design and implementation of numerical analysis systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32fb"
+      },
+      "name": "Computer Organization",
+      "teacher": "Dr. Baker",
+      "room": "901",
+      "description": "A course on the design and implementation of computer organization systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32fc"
+      },
+      "name": "Digital Logic Design",
+      "teacher": "Dr. Gonzalez",
+      "room": "902",
+      "description": "A course on the design and implementation of digital logic design systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32fd"
+      },
+      "name": "Embedded Systems",
+      "teacher": "Dr. Nelson",
+      "room": "903",
+      "description": "A course on the design and implementation of embedded systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32fe"
+      },
+      "name": "Computer Security",
+      "teacher": "Dr. Carter",
+      "room": "904",
+      "description": "A course on the design and implementation of computer security systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a32ff"
+      },
+      "name": "Network Security",
+      "teacher": "Dr. Mitchell",
+      "room": "905",
+      "description": "A course on the design and implementation of network security systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3300"
+      },
+      "name": "Ethical Hacking",
+      "teacher": "Dr. Perez",
+      "room": "1001",
+      "description": "A course on the design and implementation of ethical hacking systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3301"
+      },
+      "name": "Digital Forensics",
+      "teacher": "Dr. Roberts",
+      "room": "1002",
+      "description": "A course on the design and implementation of digital forensics systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3302"
+      },
+      "name": "Malware Analysis",
+      "teacher": "Dr. Turner",
+      "room": "1003",
+      "description": "A course on the design and implementation of malware analysis systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3303"
+      },
+      "name": "Penetration Testing",
+      "teacher": "Dr. Phillips",
+      "room": "1004",
+      "description": "A course on the design and implementation of penetration testing systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3304"
+      },
+      "name": "Secure Coding",
+      "teacher": "Dr. Campbell",
+      "room": "1005",
+      "description": "A course on the design and implementation of secure coding systems.",
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3305"
+      },
+      "name": "Computer Science Club",
+      "description": "A club for students interested in computer science.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a3"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a1"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3306"
+      },
+      "name": "Data Science Club",
+      "description": "A club for students interested in data science.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a4"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a5"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a6"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a4"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3307"
+      },
+      "name": "Cybersecurity Club",
+      "description": "A club for students interested in cybersecurity.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a7"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a8"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a9"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a7"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3308"
+      },
+      "name": "AI Club",
+      "description": "A club for students interested in artificial intelligence.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32aa"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ab"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ac"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32aa"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3309"
+      },
+      "name": "Web Development Club",
+      "description": "A club for students interested in web development.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ad"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ae"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32af"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ad"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a330a"
+      },
+      "name": "Game Development Club",
+      "description": "A club for students interested in game development.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b0"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b2"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b0"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a330b"
+      },
+      "name": "Mobile App Development Club",
+      "description": "A club for students interested in mobile app development.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b3"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b4"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b5"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b3"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a330c"
+      },
+      "name": "Blockchain Club",
+      "description": "A club for students interested in blockchain.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b6"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b7"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b8"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b6"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a330d"
+      },
+      "name": "Robotics Club",
+      "description": "A club for students interested in robotics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b9"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ba"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bb"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b9"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a330e"
+      },
+      "name": "Cloud Computing Club",
+      "description": "A club for students interested in cloud computing.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bc"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bd"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32be"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32bc"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a330f"
+      },
+      "name": "Big Data Club",
+      "description": "A club for students interested in big data.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bf"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c0"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c1"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32bf"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3310"
+      },
+      "name": "Internet of Things Club",
+      "description": "A club for students interested in the Internet of Things.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c3"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c4"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c2"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3311"
+      },
+      "name": "Quantum Computing Club",
+      "description": "A club for students interested in quantum computing.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c5"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c6"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c7"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c5"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3312"
+      },
+      "name": "Bioinformatics Club",
+      "description": "A club for students interested in bioinformatics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c8"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c9"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ca"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c8"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3313"
+      },
+      "name": "Computational Linguistics Club",
+      "description": "A club for students interested in computational linguistics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cb"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cc"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cd"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32cb"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3314"
+      },
+      "name": "Computer Architecture Club",
+      "description": "A club for students interested in computer architecture.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ce"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cf"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d0"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ce"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3315"
+      },
+      "name": "Compiler Design Club",
+      "description": "A club for students interested in compiler design.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a1"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32d1"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3316"
+      },
+      "name": "Software Testing Club",
+      "description": "A club for students interested in software testing.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a3"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a4"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a2"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3317"
+      },
+      "name": "Software Project Management Club",
+      "description": "A club for students interested in software project management.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a5"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a6"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a7"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a5"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3318"
+      },
+      "name": "Human-Computer Interaction Club",
+      "description": "A club for students interested in human-computer interaction.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a8"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a9"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32aa"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a8"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3319"
+      },
+      "name": "Information Retrieval Club",
+      "description": "A club for students interested in information retrieval.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ab"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ac"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ad"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ab"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a331a"
+      },
+      "name": "Data Mining Club",
+      "description": "A club for students interested in data mining.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ae"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32af"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b0"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ae"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a331b"
+      },
+      "name": "Computer Forensics Club",
+      "description": "A club for students interested in computer forensics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b3"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b1"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a331c"
+      },
+      "name": "Cryptography Club",
+      "description": "A club for students interested in cryptography.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b4"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b5"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b6"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b4"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a331d"
+      },
+      "name": "Computer Ethics Club",
+      "description": "A club for students interested in computer ethics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b7"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b8"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b9"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b7"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a331e"
+      },
+      "name": "Theory of Computation Club",
+      "description": "A club for students interested in the theory of computation.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ba"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bb"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bc"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ba"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a331f"
+      },
+      "name": "Linear Algebra Club",
+      "description": "A club for students interested in linear algebra.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bd"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32be"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bf"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32bd"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3320"
+      },
+      "name": "Calculus Club",
+      "description": "A club for students interested in calculus.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c0"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c2"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c0"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3321"
+      },
+      "name": "Discrete Mathematics Club",
+      "description": "A club for students interested in discrete mathematics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c3"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c4"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c5"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c3"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3322"
+      },
+      "name": "Probability and Statistics Club",
+      "description": "A club for students interested in probability and statistics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c6"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c7"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c8"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c6"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3323"
+      },
+      "name": "Numerical Analysis Club",
+      "description": "A club for students interested in numerical analysis.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c9"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ca"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cb"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c9"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3324"
+      },
+      "name": "Computer Organization Club",
+      "description": "A club for students interested in computer organization.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cc"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cd"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ce"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32cc"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3325"
+      },
+      "name": "Digital Logic Design Club",
+      "description": "A club for students interested in digital logic design.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cf"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d0"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d1"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32cf"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3326"
+      },
+      "name": "Embedded Systems Club",
+      "description": "A club for students interested in embedded systems.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a2"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32d2"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3327"
+      },
+      "name": "Computer Security Club",
+      "description": "A club for students interested in computer security.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a3"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a4"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a5"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a3"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3328"
+      },
+      "name": "Network Security Club",
+      "description": "A club for students interested in network security.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a6"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a7"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a8"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a6"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3329"
+      },
+      "name": "Ethical Hacking Club",
+      "description": "A club for students interested in ethical hacking.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32a9"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32aa"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ab"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32a9"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a332a"
+      },
+      "name": "Digital Forensics Club",
+      "description": "A club for students interested in digital forensics.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ac"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ad"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ae"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ac"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a332b"
+      },
+      "name": "Malware Analysis Club",
+      "description": "A club for students interested in malware analysis.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32af"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b0"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b1"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32af"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a332c"
+      },
+      "name": "Penetration Testing Club",
+      "description": "A club for students interested in penetration testing.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b3"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b4"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b2"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a332d"
+      },
+      "name": "Secure Coding Club",
+      "description": "A club for students interested in secure coding.",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b5"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b6"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b7"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b5"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a332e"
+      },
+      "name": "Group 42",
+      "description": "Description for group 42",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b8"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32b9"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ba"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32b8"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a332f"
+      },
+      "name": "Group 43",
+      "description": "Description for group 43",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bb"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bc"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bd"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32bb"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3330"
+      },
+      "name": "Group 44",
+      "description": "Description for group 44",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32be"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32bf"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c0"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32be"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3331"
+      },
+      "name": "Group 45",
+      "description": "Description for group 45",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c2"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c3"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c1"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3332"
+      },
+      "name": "Group 46",
+      "description": "Description for group 46",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c4"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c5"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c6"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c4"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3333"
+      },
+      "name": "Group 47",
+      "description": "Description for group 47",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c7"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c8"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32c9"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32c7"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3334"
+      },
+      "name": "Group 48",
+      "description": "Description for group 48",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ca"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cb"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cc"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32ca"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3335"
+      },
+      "name": "Group 49",
+      "description": "Description for group 49",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cd"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32ce"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32cf"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32cd"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3336"
+      },
+      "name": "Group 50",
+      "description": "Description for group 50",
+      "members": [
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d0"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d1"
+        },
+        {
+          "$oid": "67362a9a7e3b62d85b1a32d2"
+        }
+      ],
+      "admin": {
+        "$oid": "67362a9a7e3b62d85b1a32d0"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    }
+  ],
+  "schedules": [
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3337"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d3"
+      },
+      "startTime": {
+        "$date": "2025-10-20T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-20T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3338"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d4"
+      },
+      "startTime": {
+        "$date": "2025-10-21T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-21T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3339"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d5"
+      },
+      "startTime": {
+        "$date": "2025-10-22T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-22T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a333a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d6"
+      },
+      "startTime": {
+        "$date": "2025-10-23T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-23T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a333b"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a3"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d7"
+      },
+      "startTime": {
+        "$date": "2025-10-24T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-24T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a333c"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a3"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d8"
+      },
+      "startTime": {
+        "$date": "2025-10-27T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-27T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a333d"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a4"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d9"
+      },
+      "startTime": {
+        "$date": "2025-10-28T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-28T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a333e"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a4"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32da"
+      },
+      "startTime": {
+        "$date": "2025-10-29T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-29T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a333f"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a5"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32db"
+      },
+      "startTime": {
+        "$date": "2025-10-30T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-30T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3340"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a5"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32dc"
+      },
+      "startTime": {
+        "$date": "2025-10-31T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-31T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3341"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a6"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32dd"
+      },
+      "startTime": {
+        "$date": "2025-11-03T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-03T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3342"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a6"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32de"
+      },
+      "startTime": {
+        "$date": "2025-11-04T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-04T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3343"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a7"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32df"
+      },
+      "startTime": {
+        "$date": "2025-11-05T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-05T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3344"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a7"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e0"
+      },
+      "startTime": {
+        "$date": "2025-11-06T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-06T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3345"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a8"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e1"
+      },
+      "startTime": {
+        "$date": "2025-11-07T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-07T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3346"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a8"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e2"
+      },
+      "startTime": {
+        "$date": "2025-11-10T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-10T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3347"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a9"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e3"
+      },
+      "startTime": {
+        "$date": "2025-11-11T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-11T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3348"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32a9"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e4"
+      },
+      "startTime": {
+        "$date": "2025-11-12T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-12T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3349"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32aa"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e5"
+      },
+      "startTime": {
+        "$date": "2025-11-13T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-13T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a334a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32aa"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e6"
+      },
+      "startTime": {
+        "$date": "2025-11-14T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-14T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a334b"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ab"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e7"
+      },
+      "startTime": {
+        "$date": "2025-11-17T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-17T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a334c"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ab"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e8"
+      },
+      "startTime": {
+        "$date": "2025-11-18T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-18T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a334d"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ac"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e9"
+      },
+      "startTime": {
+        "$date": "2025-11-19T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-19T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a334e"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ac"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ea"
+      },
+      "startTime": {
+        "$date": "2025-11-20T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-20T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a334f"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ad"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32eb"
+      },
+      "startTime": {
+        "$date": "2025-11-21T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-21T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3350"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ad"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ec"
+      },
+      "startTime": {
+        "$date": "2025-11-24T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-24T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3351"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ae"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ed"
+      },
+      "startTime": {
+        "$date": "2025-11-25T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-25T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3352"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ae"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ee"
+      },
+      "startTime": {
+        "$date": "2025-11-26T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-26T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3353"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32af"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ef"
+      },
+      "startTime": {
+        "$date": "2025-11-27T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-27T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3354"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32af"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f0"
+      },
+      "startTime": {
+        "$date": "2025-11-28T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-28T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3355"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b0"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f1"
+      },
+      "startTime": {
+        "$date": "2025-12-01T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-01T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3356"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b0"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f2"
+      },
+      "startTime": {
+        "$date": "2025-12-02T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-02T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3357"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f3"
+      },
+      "startTime": {
+        "$date": "2025-12-03T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-03T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3358"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f4"
+      },
+      "startTime": {
+        "$date": "2025-12-04T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-04T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3359"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f5"
+      },
+      "startTime": {
+        "$date": "2025-12-05T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-05T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a335a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f6"
+      },
+      "startTime": {
+        "$date": "2025-12-08T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-08T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a335b"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b3"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f7"
+      },
+      "startTime": {
+        "$date": "2025-12-09T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-09T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a335c"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b3"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f8"
+      },
+      "startTime": {
+        "$date": "2025-12-10T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-10T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a335d"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b4"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f9"
+      },
+      "startTime": {
+        "$date": "2025-12-11T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-11T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a335e"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b4"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fa"
+      },
+      "startTime": {
+        "$date": "2025-12-12T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-12T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a335f"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b5"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fb"
+      },
+      "startTime": {
+        "$date": "2025-12-15T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-15T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3360"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b5"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fc"
+      },
+      "startTime": {
+        "$date": "2025-12-16T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-16T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3361"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b6"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fd"
+      },
+      "startTime": {
+        "$date": "2025-12-17T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-17T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3362"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b6"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fe"
+      },
+      "startTime": {
+        "$date": "2025-12-18T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-18T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3363"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b7"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ff"
+      },
+      "startTime": {
+        "$date": "2025-12-19T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-19T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3364"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b7"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3300"
+      },
+      "startTime": {
+        "$date": "2025-12-22T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-22T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3365"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b8"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3301"
+      },
+      "startTime": {
+        "$date": "2025-12-23T13:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-23T15:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3366"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b8"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3302"
+      },
+      "startTime": {
+        "$date": "2025-12-24T14:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-24T16:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3367"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b9"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3303"
+      },
+      "startTime": {
+        "$date": "2025-12-25T09:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-25T11:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3368"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32b9"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3304"
+      },
+      "startTime": {
+        "$date": "2025-12-26T10:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-26T12:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3369"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ba"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d3"
+      },
+      "startTime": {
+        "$date": "2025-10-20T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-20T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a336a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ba"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d4"
+      },
+      "startTime": {
+        "$date": "2025-10-21T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-21T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a336b"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bb"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d5"
+      },
+      "startTime": {
+        "$date": "2025-10-22T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-22T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a336c"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bb"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d6"
+      },
+      "startTime": {
+        "$date": "2025-10-23T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-23T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a336d"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bc"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d7"
+      },
+      "startTime": {
+        "$date": "2025-10-24T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-24T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a336e"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bc"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d8"
+      },
+      "startTime": {
+        "$date": "2025-10-27T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-27T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a336f"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bd"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32d9"
+      },
+      "startTime": {
+        "$date": "2025-10-28T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-28T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3370"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bd"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32da"
+      },
+      "startTime": {
+        "$date": "2025-10-29T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-29T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3371"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32be"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32db"
+      },
+      "startTime": {
+        "$date": "2025-10-30T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-30T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3372"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32be"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32dc"
+      },
+      "startTime": {
+        "$date": "2025-10-31T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-10-31T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3373"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bf"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32dd"
+      },
+      "startTime": {
+        "$date": "2025-11-03T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-03T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3374"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32bf"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32de"
+      },
+      "startTime": {
+        "$date": "2025-11-04T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-04T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3375"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c0"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32df"
+      },
+      "startTime": {
+        "$date": "2025-11-05T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-05T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3376"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c0"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e0"
+      },
+      "startTime": {
+        "$date": "2025-11-06T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-06T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3377"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e1"
+      },
+      "startTime": {
+        "$date": "2025-11-07T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-07T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3378"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e2"
+      },
+      "startTime": {
+        "$date": "2025-11-10T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-10T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3379"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e3"
+      },
+      "startTime": {
+        "$date": "2025-11-11T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-11T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a337a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e4"
+      },
+      "startTime": {
+        "$date": "2025-11-12T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-12T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a337b"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c3"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e5"
+      },
+      "startTime": {
+        "$date": "2025-11-13T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-13T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a337c"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c3"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e6"
+      },
+      "startTime": {
+        "$date": "2025-11-14T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-14T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a337d"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c4"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e7"
+      },
+      "startTime": {
+        "$date": "2025-11-17T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-17T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a337e"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c4"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e8"
+      },
+      "startTime": {
+        "$date": "2025-11-18T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-18T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a337f"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c5"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32e9"
+      },
+      "startTime": {
+        "$date": "2025-11-19T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-19T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3380"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c5"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ea"
+      },
+      "startTime": {
+        "$date": "2025-11-20T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-20T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3381"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c6"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32eb"
+      },
+      "startTime": {
+        "$date": "2025-11-21T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-21T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3382"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c6"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ec"
+      },
+      "startTime": {
+        "$date": "2025-11-24T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-24T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3383"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c7"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ed"
+      },
+      "startTime": {
+        "$date": "2025-11-25T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-25T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3384"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c7"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ee"
+      },
+      "startTime": {
+        "$date": "2025-11-26T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-26T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3385"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c8"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ef"
+      },
+      "startTime": {
+        "$date": "2025-11-27T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-27T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3386"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c8"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f0"
+      },
+      "startTime": {
+        "$date": "2025-11-28T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-11-28T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3387"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c9"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f1"
+      },
+      "startTime": {
+        "$date": "2025-12-01T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-01T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3388"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32c9"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f2"
+      },
+      "startTime": {
+        "$date": "2025-12-02T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-02T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3389"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ca"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f3"
+      },
+      "startTime": {
+        "$date": "2025-12-03T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-03T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a338a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ca"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f4"
+      },
+      "startTime": {
+        "$date": "2025-12-04T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-04T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a338b"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cb"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f5"
+      },
+      "startTime": {
+        "$date": "2025-12-05T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-05T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a338c"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cb"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f6"
+      },
+      "startTime": {
+        "$date": "2025-12-08T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-08T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a338d"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cc"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f7"
+      },
+      "startTime": {
+        "$date": "2025-12-09T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-09T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a338e"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cc"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f8"
+      },
+      "startTime": {
+        "$date": "2025-12-10T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-10T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a338f"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cd"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32f9"
+      },
+      "startTime": {
+        "$date": "2025-12-11T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-11T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3390"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cd"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fa"
+      },
+      "startTime": {
+        "$date": "2025-12-12T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-12T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3391"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ce"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fb"
+      },
+      "startTime": {
+        "$date": "2025-12-15T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-15T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3392"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32ce"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fc"
+      },
+      "startTime": {
+        "$date": "2025-12-16T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-16T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3393"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cf"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fd"
+      },
+      "startTime": {
+        "$date": "2025-12-17T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-17T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3394"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32cf"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32fe"
+      },
+      "startTime": {
+        "$date": "2025-12-18T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-18T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3395"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32d0"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a32ff"
+      },
+      "startTime": {
+        "$date": "2025-12-19T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-19T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3396"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32d0"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3300"
+      },
+      "startTime": {
+        "$date": "2025-12-22T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-22T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3397"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32d1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3301"
+      },
+      "startTime": {
+        "$date": "2025-12-23T15:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-23T17:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3398"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32d1"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3302"
+      },
+      "startTime": {
+        "$date": "2025-12-24T16:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-24T18:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a3399"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32d2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3303"
+      },
+      "startTime": {
+        "$date": "2025-12-25T11:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-25T13:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "67362a9a7e3b62d85b1a339a"
+      },
+      "studentId": {
+        "$oid": "67362a9a7e3b62d85b1a32d2"
+      },
+      "courseId": {
+        "$oid": "67362a9a7e3b62d85b1a3304"
+      },
+      "startTime": {
+        "$date": "2025-12-26T12:00:00Z"
+      },
+      "endTime": {
+        "$date": "2025-12-26T14:00:00Z"
+      },
+      "createdAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      },
+      "updatedAt": {
+        "$date": "2025-10-14T16:45:00Z"
+      }
+    }
+  ]
+}
