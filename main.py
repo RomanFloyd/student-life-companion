@@ -84,6 +84,14 @@ def init_db():
         user_query TEXT
     )
     """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS user_profiles (
+        user_id TEXT PRIMARY KEY,
+        profile_type TEXT,
+        created_at INTEGER,
+        updated_at INTEGER
+    )
+    """)
     con.commit(); con.close()
 
 init_db()
@@ -406,6 +414,85 @@ def rate_answer(req: RatingRequest):
     con.commit()
     con.close()
     return {"status": "success", "message": "Rating saved"}
+
+class ProfileRequest(BaseModel):
+    user_id: str
+    profile_type: str  # student-longterm, teacher-shortterm, exchange-visiting, just-arrived
+
+@app.post("/profile")
+def set_user_profile(req: ProfileRequest):
+    """Set or update user profile"""
+    valid_profiles = ["student-longterm", "teacher-shortterm", "exchange-visiting", "just-arrived"]
+    if req.profile_type not in valid_profiles:
+        return {"status": "error", "message": f"Invalid profile. Choose from: {valid_profiles}"}
+    
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    
+    # Check if profile exists
+    cur.execute("SELECT user_id FROM user_profiles WHERE user_id = ?", (req.user_id,))
+    exists = cur.fetchone()
+    
+    ts = int(time.time())
+    if exists:
+        cur.execute(
+            "UPDATE user_profiles SET profile_type = ?, updated_at = ? WHERE user_id = ?",
+            (req.profile_type, ts, req.user_id)
+        )
+    else:
+        cur.execute(
+            "INSERT INTO user_profiles (user_id, profile_type, created_at, updated_at) VALUES (?,?,?,?)",
+            (req.user_id, req.profile_type, ts, ts)
+        )
+    
+    con.commit()
+    con.close()
+    return {"status": "success", "profile": req.profile_type}
+
+@app.get("/profile/{user_id}")
+def get_user_profile(user_id: str):
+    """Get user profile"""
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("SELECT profile_type, created_at FROM user_profiles WHERE user_id = ?", (user_id,))
+    row = cur.fetchone()
+    con.close()
+    
+    if not row:
+        return {"status": "not_found", "profile": None}
+    
+    return {"status": "success", "profile": row[0], "created_at": row[1]}
+
+@app.get("/profiles")
+def get_available_profiles():
+    """Get list of available profiles"""
+    profiles = [
+        {
+            "id": "student-longterm",
+            "name": "📚 Student (long-term)",
+            "description": "Full degree program (1-4 years)",
+            "topics": ["visa", "housing", "banking", "healthcare", "transport", "mobile", "university", "admin", "work", "life"]
+        },
+        {
+            "id": "teacher-shortterm",
+            "name": "👨‍🏫 Teacher (3-9 weeks)",
+            "description": "Short-term teaching position",
+            "topics": ["housing", "transport", "life", "mobile"]
+        },
+        {
+            "id": "exchange-visiting",
+            "name": "🌍 Exchange/Visiting (3-9 weeks)",
+            "description": "Exchange student or visiting researcher",
+            "topics": ["housing", "transport", "mobile", "life", "university"]
+        },
+        {
+            "id": "just-arrived",
+            "name": "🛬 Just Arrived (first week)",
+            "description": "Survival guide for your first days",
+            "topics": ["transport", "mobile", "life", "housing"]
+        }
+    ]
+    return {"profiles": profiles}
 
 @app.get("/popular")
 def get_popular_questions(limit: int = 5):

@@ -7,8 +7,8 @@ Connects to FastAPI backend and provides Q&A interface
 import os
 import logging
 import httpx
-from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -30,27 +30,126 @@ if not TELEGRAM_BOT_TOKEN:
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Send welcome message when /start command is issued"""
-    welcome_message = """
-👋 **Welcome to Harbour.Space Student Life Companion!**
+    """Send welcome message and profile selection"""
+    user_id = str(update.effective_user.id)
+    
+    # Check if user already has a profile
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"{API_BASE_URL}/profile/{user_id}", timeout=5.0)
+            data = response.json()
+            
+            if data.get("status") == "success":
+                # User has profile, show welcome
+                profile_name = {
+                    "student-longterm": "📚 Student (long-term)",
+                    "teacher-shortterm": "👨‍🏫 Teacher (3-9 weeks)",
+                    "exchange-visiting": "🌍 Exchange/Visiting (3-9 weeks)",
+                    "just-arrived": "🛬 Just Arrived"
+                }.get(data.get("profile"), "Unknown")
+                
+                welcome_message = f"""
+👋 **Welcome back to Harbour.Space Student Life Companion!**
 
-I'm here to help you with:
-🎓 University procedures (TIE, visa, enrollment)
-🏠 Housing (empadronamiento, finding apartments)
-💳 Banking & admin (bank accounts, NIE, taxes)
-🚇 Transport (metro, T-Casual, airport)
-🏥 Healthcare (TSI card, insurance)
-📱 Mobile (SIM cards, phone plans)
-🌆 Life in Barcelona (beaches, food, Spanish classes)
+Your profile: {profile_name}
 
 **Just ask me anything!** For example:
 • "How to book TIE appointment?"
 • "Where to learn Spanish?"
 • "What is empadronamiento?"
 
-Type /help to see available commands.
+Type /profile to change your profile
+Type /help to see available commands
 """
-    await update.message.reply_text(welcome_message, parse_mode='Markdown')
+                await update.message.reply_text(welcome_message, parse_mode='Markdown')
+                return
+    except Exception as e:
+        logger.error(f"Error checking profile: {e}")
+    
+    # No profile - show selection
+    await show_profile_selection(update, context)
+
+
+async def show_profile_selection(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Show profile selection buttons"""
+    keyboard = [
+        [InlineKeyboardButton("📚 Student (long-term)", callback_data="profile_student-longterm")],
+        [InlineKeyboardButton("👨‍🏫 Teacher (3-9 weeks)", callback_data="profile_teacher-shortterm")],
+        [InlineKeyboardButton("🌍 Exchange/Visiting (3-9 weeks)", callback_data="profile_exchange-visiting")],
+        [InlineKeyboardButton("🛬 Just Arrived (first week)", callback_data="profile_just-arrived")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
+    message = """
+👋 **Welcome to Harbour.Space Student Life Companion!**
+
+Please select your profile to get personalized help:
+
+📚 **Student (long-term)** - Full degree (1-4 years)
+👨‍🏫 **Teacher** - Short-term teaching (3-9 weeks)
+🌍 **Exchange/Visiting** - Exchange student (3-9 weeks)
+🛬 **Just Arrived** - Survival guide (first week)
+
+Choose your profile:
+"""
+    
+    if update.callback_query:
+        await update.callback_query.message.edit_text(message, reply_markup=reply_markup, parse_mode='Markdown')
+    else:
+        await update.message.reply_text(message, reply_markup=reply_markup, parse_mode='Markdown')
+
+
+async def profile_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle profile selection"""
+    query = update.callback_query
+    await query.answer()
+    
+    profile_type = query.data.replace("profile_", "")
+    user_id = str(update.effective_user.id)
+    
+    # Save profile
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                f"{API_BASE_URL}/profile",
+                json={"user_id": user_id, "profile_type": profile_type},
+                timeout=5.0
+            )
+            data = response.json()
+            
+            if data.get("status") == "success":
+                profile_names = {
+                    "student-longterm": "📚 Student (long-term)",
+                    "teacher-shortterm": "👨‍🏫 Teacher (3-9 weeks)",
+                    "exchange-visiting": "🌍 Exchange/Visiting (3-9 weeks)",
+                    "just-arrived": "🛬 Just Arrived"
+                }
+                
+                success_message = f"""
+✅ **Profile set: {profile_names.get(profile_type)}**
+
+I'll now show you relevant information for your profile!
+
+**Just ask me anything!** For example:
+• "How to book TIE appointment?"
+• "Where to find apartment?"
+• "How much does metro cost?"
+
+Type /help to see available commands
+Type /profile to change your profile
+"""
+                await query.message.edit_text(success_message, parse_mode='Markdown')
+            else:
+                await query.message.edit_text("❌ Error setting profile. Please try again with /profile")
+                
+    except Exception as e:
+        logger.error(f"Error saving profile: {e}")
+        await query.message.edit_text("❌ Error setting profile. Please try again with /profile")
+
+
+async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Show profile selection"""
+    await show_profile_selection(update, context)
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -59,6 +158,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 **Available Commands:**
 
 /start - Welcome message
+/profile - Change your profile
 /help - Show this help message
 /topics - Show available topics
 /popular - Show popular questions
@@ -195,9 +295,11 @@ def main():
     
     # Add handlers
     application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("profile", profile_command))
     application.add_handler(CommandHandler("help", help_command))
     application.add_handler(CommandHandler("topics", topics_command))
     application.add_handler(CommandHandler("popular", popular_command))
+    application.add_handler(CallbackQueryHandler(profile_callback, pattern="^profile_"))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_question))
     
     # Add error handler
