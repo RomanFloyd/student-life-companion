@@ -422,7 +422,7 @@ class ProfileRequest(BaseModel):
 @app.post("/profile")
 def set_user_profile(req: ProfileRequest):
     """Set or update user profile"""
-    valid_profiles = ["student-longterm", "teacher-shortterm", "exchange-visiting", "just-arrived"]
+    valid_profiles = ["student-longterm", "teacher-shortterm", "exchange-visiting", "just-arrived", "other"]
     if req.profile_type not in valid_profiles:
         return {"status": "error", "message": f"Invalid profile. Choose from: {valid_profiles}"}
     
@@ -490,6 +490,12 @@ def get_available_profiles():
             "name": "🛬 Just Arrived (first week)",
             "description": "Survival guide for your first days",
             "topics": ["transport", "mobile", "life", "housing"]
+        },
+        {
+            "id": "other",
+            "name": "🤷 Other",
+            "description": "I don't fit into these categories",
+            "topics": ["visa", "housing", "banking", "healthcare", "transport", "mobile", "university", "admin", "work", "life"]
         }
     ]
     return {"profiles": profiles}

@@ -541,9 +541,14 @@
     
     .profile-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
       margin-bottom: 20px;
+    }
+    
+    .profile-grid .profile-card:nth-child(5),
+    .profile-grid .profile-card:nth-child(6) {
+      grid-column: span 1;
     }
     
     .profile-card {
@@ -618,6 +623,8 @@
       margin-left: 10px;
       cursor: pointer;
       transition: all 0.3s ease;
+      color: #667eea;
+      font-weight: 600;
     }
     
     .current-profile:hover {
@@ -660,17 +667,6 @@
       </p>
     </div>
 
-    <div class="popular-section">
-      <h3>🔥 Most Popular Questions</h3>
-      <div id="popularQuestions"></div>
-    </div>
-
-    <div class="topic-filters">
-      <h3>🔍 Browse by Topic</h3>
-      <div class="filter-buttons" id="topicFilters"></div>
-      <div class="questions-list" id="questionsList"></div>
-    </div>
-
     <div class="search-box">
       <textarea id="question" placeholder="Ask me anything: visa 🛂, housing 🏠, transport 🚇, university 🎓, food 🍕, discounts 💰..."></textarea>
       <button class="btn-primary" onclick="submitQuestion()">🔍 Ask Question</button>
@@ -678,6 +674,17 @@
 
     <!-- сюда пойдёт ответ -->
     <div id="answer"></div>
+
+    <div class="topic-filters">
+      <h3>🔍 Browse by Topic</h3>
+      <div class="filter-buttons" id="topicFilters"></div>
+      <div class="questions-list" id="questionsList"></div>
+    </div>
+
+    <div class="popular-section">
+      <h3>🔥 Most Popular Questions</h3>
+      <div id="popularQuestions"></div>
+    </div>
 
     <div class="history-section">
       <h3>📜 Recent Questions</h3>
@@ -742,7 +749,8 @@
         'student-longterm': '📚',
         'teacher-shortterm': '👨‍🏫',
         'exchange-visiting': '🌍',
-        'just-arrived': '🛬'
+        'just-arrived': '🛬',
+        'other': '🤷'
       };
       
       data.profiles.forEach(profile => {
@@ -820,7 +828,8 @@
       'student-longterm': '📚 Student',
       'teacher-shortterm': '👨‍🏫 Teacher',
       'exchange-visiting': '🌍 Exchange',
-      'just-arrived': '🛬 Just Arrived'
+      'just-arrived': '🛬 Just Arrived',
+      'other': '🤷 Other'
     };
     
     const profileSpan = document.getElementById('currentProfile');
@@ -950,8 +959,12 @@
         <span class="count">${Object.values(topics).reduce((a, b) => a + b, 0)}</span>
       </button>`;
       
-      // Add topic buttons
-      for (const [topic, count] of Object.entries(topics).sort()) {
+      // Add topic buttons (show only top 5 by count)
+      const sortedTopics = Object.entries(topics)
+        .sort((a, b) => b[1] - a[1])  // Sort by count descending
+        .slice(0, 5);  // Take only top 5
+      
+      for (const [topic, count] of sortedTopics) {
         const icon = TOPIC_ICONS[topic] || '📌';
         buttonsHTML += `<button class="filter-btn" onclick="filterByTopic('${topic}')">
           <span>${icon} ${topic.charAt(0).toUpperCase() + topic.slice(1)}</span>

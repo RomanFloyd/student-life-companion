@@ -45,7 +45,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "student-longterm": "📚 Student (long-term)",
                     "teacher-shortterm": "👨‍🏫 Teacher (3-9 weeks)",
                     "exchange-visiting": "🌍 Exchange/Visiting (3-9 weeks)",
-                    "just-arrived": "🛬 Just Arrived"
+                    "just-arrived": "🛬 Just Arrived",
+                    "other": "🤷 Other"
                 }.get(data.get("profile"), "Unknown")
                 
                 welcome_message = f"""
@@ -76,7 +77,8 @@ async def show_profile_selection(update: Update, context: ContextTypes.DEFAULT_T
         [InlineKeyboardButton("📚 Student (long-term)", callback_data="profile_student-longterm")],
         [InlineKeyboardButton("👨‍🏫 Teacher (3-9 weeks)", callback_data="profile_teacher-shortterm")],
         [InlineKeyboardButton("🌍 Exchange/Visiting (3-9 weeks)", callback_data="profile_exchange-visiting")],
-        [InlineKeyboardButton("🛬 Just Arrived (first week)", callback_data="profile_just-arrived")]
+        [InlineKeyboardButton("🛬 Just Arrived (first week)", callback_data="profile_just-arrived")],
+        [InlineKeyboardButton("🤷 Other", callback_data="profile_other")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
@@ -89,6 +91,7 @@ Please select your profile to get personalized help:
 👨‍🏫 **Teacher** - Short-term teaching (3-9 weeks)
 🌍 **Exchange/Visiting** - Exchange student (3-9 weeks)
 🛬 **Just Arrived** - Survival guide (first week)
+🤷 **Other** - I don't fit into these categories
 
 Choose your profile:
 """
@@ -122,7 +125,8 @@ async def profile_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "student-longterm": "📚 Student (long-term)",
                     "teacher-shortterm": "👨‍🏫 Teacher (3-9 weeks)",
                     "exchange-visiting": "🌍 Exchange/Visiting (3-9 weeks)",
-                    "just-arrived": "🛬 Just Arrived"
+                    "just-arrived": "🛬 Just Arrived",
+                    "other": "🤷 Other"
                 }
                 
                 success_message = f"""
