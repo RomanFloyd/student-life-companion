@@ -1,25 +1,38 @@
 # Student Life Companion 🎓
 
-AI-powered assistant for international students in Spain, helping with visa, work permits, and tax questions.
+AI-powered Q&A assistant for Harbour.Space students in Barcelona. Provides instant answers about visa, housing, transport, healthcare, and student life using semantic search and AI.
 
-## Features
+## ✨ Features
 
-- **Semantic Search**: Uses TF-IDF and cosine similarity to find relevant answers
-- **AI Fallback**: Groq LLM (Llama 3.1 70B) answers questions not in knowledge base - **FREE!**
-- **Knowledge Base**: 42 curated Q&As about student life, visa, housing, university
-- **Rating System**: 👍/👎 ratings improve search results
-- **Topic Filters**: Browse questions by category (Visa, Housing, University, etc.)
-- **Popular Questions**: Top-5 most helpful answers
-- **Query History**: SQLite database tracks all questions and answers
-- **Dark Theme**: Beautiful UI with animations and gradients
-- **Mobile Ready**: Works on phone via local network
+### Core Functionality
+- **🧠 Semantic Search**: Sentence Transformers embeddings for accurate question matching
+- **🤖 AI Fallback**: Groq LLM (Llama 3.3 70B) for questions outside knowledge base
+- **📚 Knowledge Base**: 42 curated Q&As covering all aspects of student life
+- **👥 User Profiles**: Personalized experience (Student, Teacher, Exchange, Just Arrived, Other)
+- **⭐ Smart Relevance**: Three-tier relevance checking (embeddings + AI verification)
 
-## Tech Stack
+### User Experience
+- **💬 Telegram Bot**: Natural language interface with inline buttons
+- **🌐 Web Interface**: Beautiful responsive UI with dark mode
+- **📊 Topic Filtering**: Browse by category (Visa, Housing, Transport, etc.)
+- **🔥 Popular Questions**: See what others find helpful
+- **📜 Query History**: Track all your questions
+- **👍👎 Rating System**: Help improve answer quality
 
-- **Backend**: FastAPI (Python)
-- **ML**: scikit-learn for semantic matching
-- **Database**: SQLite for history
-- **Frontend**: Vanilla JavaScript with modern UI
+### Technical
+- **⚡ Fast**: 50-100ms response time for KB queries
+- **🔒 Secure**: API keys in environment variables
+- **📱 Mobile Ready**: Works on any device
+- **🚀 Scalable**: Handles 100+ concurrent users
+
+## 🛠️ Tech Stack
+
+- **Backend**: FastAPI + Uvicorn
+- **ML**: Sentence Transformers (all-MiniLM-L6-v2)
+- **AI**: Groq API (llama-3.3-70b-versatile)
+- **Database**: SQLite (history, ratings, profiles)
+- **Frontend**: Vanilla JavaScript + CSS3
+- **Bot**: python-telegram-bot
 
 ## Installation
 
@@ -66,35 +79,99 @@ http://YOUR_COMPUTER_IP:8000/static/frontend.html
 - **Windows**: `ipconfig`
 - **Linux**: `ip addr show`
 
-## API Endpoints
+## 📡 API Endpoints
 
-- `GET /` - Health check
-- `GET /ask?query=<question>` - Ask a question
-- `GET /history?limit=<n>` - Get query history
+See [docs/API.md](docs/API.md) for full documentation.
+
+**Main Endpoints:**
+- `GET /ask` - Ask a question (semantic search + AI fallback)
+- `GET /topics` - Get all topics with counts
+- `GET /popular` - Get popular questions
+- `POST /profile` - Set user profile
+- `POST /rate` - Rate an answer
+- `GET /history` - Get query history
 - `GET /reload` - Reload knowledge base
 
-## Project Structure
+**Example:**
+```bash
+curl "http://127.0.0.1:8888/ask?query=How%20to%20book%20TIE%20appointment"
+```
+
+## 📁 Project Structure
 
 ```
 windsurf-project/
-├── main.py              # FastAPI backend
-├── knowledge_base.json  # Q&A data
-├── requirements.txt     # Python dependencies
+├── main.py                    # FastAPI backend with semantic search
+├── telegram_bot.py            # Telegram bot interface
+├── knowledge_base.json        # 42 curated Q&As
+├── requirements.txt           # Python dependencies
+├── .env                       # API keys (create from .env.example)
+├── .env.example               # Environment variables template
+├── notebook.db                # SQLite database (auto-created)
 ├── static/
-│   └── frontend.html    # Web interface
-└── notebook.db          # SQLite history (auto-created)
+│   └── frontend.html          # Web interface
+├── docs/
+│   ├── ARCHITECTURE.md        # System architecture
+│   └── API.md                 # API documentation
+├── tests/
+│   ├── test_smoke.py          # Smoke tests
+│   └── test_relevance.py      # Relevance checking tests
+└── TELEGRAM_BOT_SETUP.md      # Bot setup instructions
 ```
 
-## Knowledge Base
+## 🧪 Testing
+
+Run tests with pytest:
+
+```bash
+# Install pytest
+pip install pytest
+
+# Run all tests
+pytest tests/ -v
+
+# Run specific test file
+pytest tests/test_smoke.py -v
+pytest tests/test_relevance.py -v
+```
+
+**Test Coverage:**
+- ✅ Smoke tests - Basic functionality checks
+- ✅ Relevance tests - Query filtering accuracy
+- 🚧 Integration tests - Coming soon
+- 🚧 E2E tests - Coming soon
+
+## 📚 Documentation
+
+- **[Architecture](docs/ARCHITECTURE.md)** - System design and data flow
+- **[API Documentation](docs/API.md)** - Complete API reference
+- **[Telegram Bot Setup](TELEGRAM_BOT_SETUP.md)** - Bot configuration guide
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `pytest tests/ -v`
+5. Submit a pull request
+
+## 📝 Knowledge Base
 
 Edit `knowledge_base.json` to add new topics. Each entry includes:
-- `topic`: Category (visa, work, tax)
-- `question`: Sample question
+- `topic`: Category (visa, housing, transport, etc.)
+- `question`: Sample question with synonyms
 - `answer`: Detailed response
 - `steps`: Step-by-step instructions (optional)
 - `source_url`: Official link
 - `verified`: Accuracy flag
+- `cost`, `deadline`, `contacts`, `quick_links`: Additional metadata
 
-## License
+## 📄 License
 
 MIT
+
+## 🙏 Acknowledgments
+
+- **Harbour.Space University** - For the inspiration
+- **Groq** - For free LLM API access
+- **Sentence Transformers** - For semantic search capabilities
